@@ -1,0 +1,113 @@
+
+@import url("https://fonts.googleapis.com/css?family=Vollkorn");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("../css/login_style.css");
+
+    head{
+        margin: 0;
+        padding: 0;
+    }
+    
+    html, body{
+        margin: 0;
+    }
+
+    .myheader{
+        margin: 0;
+        padding: 0;
+        top: 0;
+        background-image: linear-gradient(to right, white, lightblue);
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+
+    .myheader img{
+        mix-blend-mode: darken;
+    }
+
+    [class*="col-"] {
+        padding: 15px;
+        display:table-cell;
+    }
+
+
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    [class*="col-"] ol{
+        list-style-type:none;
+    }
+
+    ol il{
+        color: blue;
+    }
+
+    .myhLogo{
+        /* width: 10%; */
+        border: 0;
+        alt: Logo;            
+    }
+
+    .myhLogo img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .myh1{
+        float: left;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .myh1 a{
+        font-family: "Open Sans Condensed", sans-serif;
+        font-weight: 1000;
+        font-size: 30px;
+        color: blue;
+    }
+
+
+    .myh1 p{
+        font-family: "Open Sans Condensed", sans-serif;
+        font-weight: 1000;
+        font-size: 25px;
+        color: rgb(103, 141, 171);
+    }
+
+    .myh2{
+        font-family: "Vollkorn", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: blue;
+        top:50%;
+        position:absolute;
+        right:50px;
+        /* text-align: right; */
+        /* vertical-align: top; */
+    }
+
+    .myh2 p{
+        color: blue;
+    }
+
+    a:link, a:visited, a:active{
+        color: blue;
+        text-decoration:none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
