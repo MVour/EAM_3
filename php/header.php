@@ -11,81 +11,160 @@
 
     <style>
 
+        * {
+            /* box-sizing: border-box; */
+        }
+
+        head{
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body{
+            margin: 0;
+        }
+
+        .myheader{
+            margin: 0;
+            padding: 0;
+            top: 0;
+            background-image: linear-gradient(to right, white, lightblue);
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+
+        .myheader img{
+            mix-blend-mode: darken;
+        }
+
+        .myheader::after {
+            /* content: ""; */
+            /* clear: both; */
+        }
+
+        [class*="col-"] {
+            padding: 15px;
+            display:table-cell;
+        }
+
+
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        [class*="col-"] ol{
+            list-style-type:none;
+        }
+
+        ol il{
+            color blue;
+        }
+
         .myhLogo{
-            width: 10%;
+            /* width: 10%; */
             border: 0;
-            alt: Logo;
-            /* height: 20px; */
-            /* float: left; */
+            alt: Logo;            
+        }
+
+        .myhLogo img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .myh1{
+            float: left;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .myh1 a{
             font-family: "Open Sans Condensed", sans-serif;
             font-weight: 1000;
             font-size: 30px;
-            color: lightblue;
-            float: left;
-            width: 60%;
-            padding: 10px;
-            margin-top: 6px;
+            color: blue;
+        }
+
+        .myh1 p{
+            font-family: "Open Sans Condensed", sans-serif;
+            font-weight: 1000;
+            font-size: 25px;
+            color: rgb(103, 141, 171);
         }
 
         .myh2{
             font-family: "Vollkorn", sans-serif;
-            font-weight: 500;
-            font-size: 30px;
+            font-weight: 400;
+            font-size: 15px;
             color: blue;
-            float: left;
-            width: 20%;
-            margin-top: 6px;
-        }
-        
-        .myh_row:after{
-            content: "";
-            display: table;
-            clear: both;
+            /* text-align: right; */
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            /* vertical-align: top; */
         }
 
-        .myh{
-            border-radius: 5px;
-            background-color: black;
-            padding: 20px;
-            /* height: 150px; */
-        }        
-
+        .myh2 p{
+            /* clear: both; */
+            /* text-align: right; */
+            /* float: right; */
+            /* display: inline; */
+            /* vertical-align: top; */
+        }
 
     </style>
 
     <head>
-
-        <!-- <div class = ".myh">
-            <div class = "myh1">
-                <p> <b> Υπουργείο Εργασίας  και Κοινωνικών Υποθέσεων</b> </p>
-            </div>
-            
-            <div class = "myh2">
-                <p> login </p>
-            </div>
-
-        </div> -->
-
-        <div class = "myh">
-            <div class = "myh_row">
-                <div class="myhLogo">
+        <div class="myheader">
+            <div class="col-2">
+                <div clas="myhLogo">
                     <a href= "../php/hello.php">
-                    <img src = "../include/images/logo.jpg"  style="float:left;width:70px;height:70px;">
+                        <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;">
                     </a>
                 </div>
-                <div class = "myh1">
-                    <p>Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
-                </div>
-                <div class = "myh2">
-                    <p>Είσοδος</p>
+            </div>
+
+            <div class="col-7">
+                <div class="myh1">
+                    <a href= "../php/hello.php" style="text-decoration:none;">
+                        <p style="letter-spacing:2px;">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
+                    </a>
                 </div>
             </div>
-        </div>    
 
-
+            <div class="col-3" style="text-align:right;">
+                <div class="myh2">
+                    <p style="word-spacing:7px; font-size:10px;transform: translateY(-400%);">
+                        ΕΛ || ENG
+                    </p>
+                </div>
+                <div class="myh2">
+                    <p>
+                        <a href= "../php/login.php">
+                            <p style="display:inline;">Είσοδος μέσω TAXIS</p>
+                        </a>
+                    
+                        <p style="display:inline;margin-left:20px;">|</p>
+                        
+                        <a href= "../php/login.php">
+                            <p style="display:inline;margin-left:20px;">Είσοδος</p>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </head>
 
     <!-- <body>
