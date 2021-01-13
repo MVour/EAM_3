@@ -10,8 +10,8 @@
     <!-- BOTH WAYS WORKING (cache issue !!) -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
     <head>
-        <link rel="stylesheet" type="text/css" href="../css/header_style.css">
-        <link rel="stylesheet" type="text/css" href="../css/login_style.css">
+        <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
+        <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
     </head>
         
     <body>
@@ -46,7 +46,7 @@
                     </p>
                 </div>
                 <div class="" style="top:50%;position:absolute;text-align:right;transform:translateY(-40%);">
-                    <form action="./login.php" method="post" autocomplete="on">
+                    <form action="../php/login.php" method="post" autocomplete="on">
                         <input type="text" name="name" placeholder="Όνομα Χρήστη" style="height:0px;width:150px;" required><br>
                         <input type="text" name="pswrd" placeholder="Κώδικός" style="height:0px;width:150px;" required><br>
                         <input type="submit" value="Είσοδος">
