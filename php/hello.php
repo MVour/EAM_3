@@ -4,7 +4,7 @@
 <body>
 
     <?php
-    echo "BITCHESSS!";
+    echo "HELLO PEOPLE";
     ?>
 
 

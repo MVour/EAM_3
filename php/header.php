@@ -2,13 +2,16 @@
     session_start();
 ?>
 
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html>
 
+<meta charset="UTF-8">
     <!-- BOTH WAYS WORKING (cache issue !!) -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
     <style>
-        <?php include "../css/header_style.css" ?>
+        <?php include "../css/header_style.css"; ?>
+        <?php include "../css/login_style.css"; ?>
     </style>
 
         <div class="myheader">
@@ -27,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="col-3" style="text-align:right;">
+            <div class="col-3" style="text-align:right;background-color:">
                 <div class="myh2" style="word-spacing:15px;font-size:10px;transform:translateY(-200%);" >
                     <p>
                         <a href="../php/gr.php">
@@ -41,20 +44,37 @@
                         </a>
                     </p>
                 </div>
-                <div class="myh2" style="transform:translateY(-50%);">
-                    <p>
+                <div class="" style="top:50%;position:absolute;text-align:right;transform:translateY(-40%);">
+                    <!-- <p>
                         <a href= "../php/login.php">
                             <p style="display:inline;">Είσοδος μέσω TAXIS</p>
-                        </a>
+                        </a> -->
 
-                        <p style="display:inline;margin-left:17px;">|</p>
+                        <!-- <p style="display:inline;margin-left:17px;">|</p>
                         
                         <a href= "../php/login.php" style="display:inline;margin-left:17px;">
                             Είσοδος
+                        </a> -->
+                        <form action="./login.php" method="post" autocomplete="on">
+                            <input type="text" name="name" placeholder="Όνομα Χρήστη" style="height:0px;width:150px;" required><br>
+                            <input type="text" name="pswrd" placeholder="Κώδικός" style="height:0px;width:150px;" required><br>
+                            <input type="submit" value="Είσοδος">
+                
+                        </div>
+                <div class="" style="top:50%;right:40px;position:absolute;text-align:right;">
+                    <p style="color:blue;margin-right:10px;display:inline"> Ή</p>
+                        <a href= "../php/login.php" style="display:inline;">
+                            Είσοδος μέσω TAXIS
                         </a>
-                    </p>
+                        </p>
+
                 </div>
             </div>
+        </div>
+
+        <div class="navbar">
+            <a href="#"> LINK </a>
+            <a href="javascript:history.back()"> LINK </a>
         </div>
     </head>
 
