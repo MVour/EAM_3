@@ -1,4 +1,75 @@
 <!Doctype html>
 
-<head>
-</head>
+<style>
+
+    html, body{
+        left: 0;
+        padding: 0;
+        margin-left: 0;
+    }
+
+
+    .center {
+        position: absolute;
+        height: 60%;
+        width:  100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 50px;
+    }
+
+    .center p{
+        text-shadow: 10px 10px 20px grey;
+    }
+
+    .center img{
+        mix-blend-mode: darken;
+        border-radius: 50%;
+        box-shadow: 10px 10px 20px grey;
+    }
+
+    .bottomcenter{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:  100%;
+        top: 60%;
+        height: 20%;
+        font-size: 20px;
+    }
+
+    .bottomcenter p{
+        display: inline;
+    }
+
+    .bottomcenter a:link, a:visited, a:active{
+        color: grey;
+        text-decoration:none;
+    }
+    .bottomcenter a:hover {
+        text-decoration: underline;
+    }
+    .vl{
+        border-left: 3px solid red;
+        height: 30px;
+        display: inline;
+        margin-left: 10px;
+    }
+
+</style>
+
+<body>
+    <div class="center">
+        <img src = "../include/images/constr_1.png">
+        <p style="margin-left: 50px;">PAGE UNDER CONSTRUCTION </p>
+    </div>
+
+    <div class="bottomcenter">
+        <a href="../php/header.php">Go Back</a>
+        <div class="vl"></div>
+        <a href="../php/header.php" style="margin-left:10px;">Home Page</p>
+    </div>
+
+</body>

@@ -63,7 +63,7 @@
                         </div>
                 <div class="" style="top:50%;right:40px;position:absolute;text-align:right;">
                     <p style="color:blue;margin-right:10px;display:inline"> Ή</p>
-                        <a href= "../php/login.php" style="display:inline;">
+                        <a href= "../php/under_construction.html" style="display:inline;">
                             Είσοδος μέσω TAXIS
                         </a>
                         </p>
