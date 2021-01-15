@@ -17,7 +17,7 @@
         margin: 0;
         padding: 0;
         top: 0;
-        background-image: linear-gradient(to right, white, lightblue);
+        background-image: linear-gradient(to right, whitesmoke, rgb(107, 145, 214));
         background-size: cover;
         background-clip: initial;
         display: table;
@@ -79,7 +79,8 @@
         font-family: "Open Sans Condensed", sans-serif;
         font-weight: 1000;
         font-size: 30px;
-        color: blue;
+        /* color: blue; */
+        color: white;
     }
 
 
@@ -94,7 +95,8 @@
         font-family: "Vollkorn", sans-serif;
         font-weight: 400;
         font-size: 15px;
-        color: blue;
+        /* color: blue; */
+        color: white;
         top:50%;
         position:absolute;
         right:50px;
@@ -103,11 +105,13 @@
     }
 
     .myh2 p{
-        color: blue;
+        /* color: blue; */
+        color: white;
     }
 
     a:link, a:visited, a:active{
-        color: blue;
+        /* color: blue; */
+        color: white;
         text-decoration:none;
     }
     a:hover {
@@ -151,4 +155,6 @@
     background-color: #ddd;
     color: black;
   }
+  
+
   

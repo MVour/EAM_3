@@ -58,65 +58,31 @@ class TableRows extends RecursiveIteratorIterator {
   }
 
         $servername = "127.0.0.1";
-        $username = "mike";
-        $password = "12patates";
+        $username = "root";
+        $password = "patates";
         $db_name = "eam_db";
+        $port = "3307";
 
-        $conn =  new mysqli($servername, $username, $password, $db_name);
+        $conn =  new mysqli($servername, $username, $password, $db_name, $port);
         if(!$conn){
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connected successfully";
-        
-        // PDO
-        // try {
-        //     $conn = new PDO("mysql:host=$servername;dbname=eam_db", $username, $password);
-        //     // set the PDO error mode to exception
-        //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //     echo "Connected successfully<br>";
-        // } catch(PDOException $e) {
-        //     echo "Connection failed: " . $e->getMessage();
-        // }
+        echo "Connected successfully<br>";
 
-        $query = $conn->prepare("SELECT COUNT(*) FROM Users WHERE User_nm = ? and User_psswrd_MD5 = ?");
-        echo "<br>geia<br>";
-
+        $query = $conn->prepare("SELECT count(*) FROM Users WHERE User_nm = ? and User_psswrd_MD5 = ?");
         $query->bind_param("ss", $name, $pswrd);
-        // $query->execute();
-        $result = $conn->query($query);
-        // $stmt->execute($name, $pswrd);
-        echo $result->num_rows;
-
-        // $stmt = $conn->prepare("SELECT COUNT(*) FROM Users");
-        // $stmt->execute();
+        $query->execute();
+        $result = $query->get_result();
+        $row = $result->fetch_assoc();
+        // print_r ($row);
+        // echo "count: ", count($row), "<br>"; // works always cuz count(*) in select always returns value
+        // echo "val: ", $row['count(*)'], "<br>";
         
-        // set the resulting array to associative
-        echo "geia";
-
-        $result = mysqli_query($conn, $sql);
-        echo $result, "<br>";
-        // $number_of_rows = $result->fetchColumn();
-        echo "geia";
-
-        foreach(new TableRows(new RecursiveArrayIterator($result)) as $k=>$v){
-            echo $v, "<br>";
-        }
-       
-        if($result >= 1)
-            echo "OLE<br>";
+        if($row['count(*)'] == 1)
+            echo "USER LOGED<br>";
         else
-            echo "SKATA STH MAPA SOU<br>";
+            echo "INVALID USER<br>";
 
-        // foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-        //   echo $v, " <br>";
-        // }
-
-        $ti = $stmt->fetchAll();
-        // $c = count($t1);
-        echo $number_of_rows;
-        print_r($ti);
-        // print_r(count($stmt->fetchAll()));
-    
-        $conn = NULL;
+        $conn->close();
     ?>
 </html>
