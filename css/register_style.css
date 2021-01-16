@@ -1,0 +1,150 @@
+.register_button{
+    display: inline-block;
+    /* color: grey; */
+    color: white;
+    opacity: 0.9;
+    margin-top: 8%;
+    margin-left: 8%;
+    cursor:pointer;
+}
+
+.register {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.register_popup{
+	background-color: white;
+    display: flex;
+    position: fixed;
+    border: 1px groove lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27%;
+    height: 70%;
+    z-index: 1;
+}
+
+.register_container{
+	width: 100%;
+    padding: 4%;
+	display: grid;
+	justify-content: center;
+    /* padding-right: 20px; */
+}
+
+.register_container h1{
+    color:black;
+    margin-top: 0;
+    padding-top: 0%;
+    margin-bottom: 6px;
+}
+
+.register_container h5{
+    display: inline-block;
+    margin-left: 10%;
+    padding: 10px;
+    letter-spacing: 2px;
+    /* background-color: grey; */
+    border: 1px solid grey;
+    color: black;
+    opacity: 0.8;
+    font-size: 90%;
+
+}
+
+.register_container h6{
+    color: grey;
+    opacity: 0.7;
+    padding-bottom: 2%;
+    font-size: 95%;
+    border-bottom: 2px solid grey;
+    margin-top: 0;
+    padding-top: 0%;
+    margin-bottom: 8px;
+}
+
+.x_button{
+    display: block;
+    position: absolute;
+    margin-left: 75%;
+    max-width: 20%;
+    max-height: 20%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.x_button img{
+    float: right;
+    height: 30%;
+    width: 15%;
+}
+
+.together {
+	width: 100%;
+	display: flex;
+	padding-left: 4%;
+	padding-right: 4%;
+	height: 100%;
+	margin-bottom: 0;
+	/* background-color: palevioletred; */
+}
+
+.alone {
+	/* background-color: blue; */
+	width: inherit;
+	padding-left: 4%;
+	padding-right: 4%;
+	height: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.register_container input, .register_container select{
+    margin-top: 10px;
+    margin-inline-end: 7px;
+    border: 3px solid #ccc;
+    background-color: whitesmoke;
+    border-radius: 5px;
+	align-items: center;
+	width: 90%;
+	height: 70%;
+	padding: 2%;
+	text-align: left;
+}
+
+.register_container input:focus{
+    border: 3px solid #555;
+    background-color: whitesmoke;
+}
+
+.register_container input:hover{
+    border: 3px solid #555;
+    background-color: #555;
+}
+
+.register_container input[type=submit]{
+    display: absolute;
+    margin-left: 15%;
+    background-color: #44b84a;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 70%;
+    height: 10%;
+    cursor: pointer;
+}
+
+.register_container input[type=submit]:hover {
+    background-color: #43a547;
+    color: rgb(172, 194, 166);
+}
