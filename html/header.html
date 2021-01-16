@@ -34,6 +34,19 @@
                 </div>
             </div>
 
+
+			<!-- COVID OVERL MENU -->
+			<div id="myNav" class="Covidover">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="Covidover-content">
+					<a href="#">About</a>
+					<a href="#">Services</a>
+					<a href="#">Clients</a>
+					<a href="#">Contact</a>
+				</div>
+			</div>
+			<!-- COVID Covidover MENU -->
+
             <div class="col-2" style="text-align:right;">
                 <div class="myh2" style="word-spacing:15px;font-size:10px;transform:translateY(-200%);" >
                     <p>
@@ -76,6 +89,9 @@
             <form action="./header.html" id="register_form" class="register_container">
                 <h1><b>Εγγραφή</b></h1>
                 <h6>Εύκολα και γρήγορα!</h6>
+				<div class="x_button">
+					<img role="button" src="../include/images/x_button.png" onclick="closeForm()">
+				</div>
 					<div class="together">
 						<input type="text" placeholder="Επώνυμο" name="l_name" required style="width:44%;">
 						<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
@@ -100,9 +116,6 @@
 					</div>
 					<input type="submit" value="Εγγραφή" style="height:60%; text-align:center;">
             </form>
-            <div class="x_button">
-                <img role="button" src="../include/images/x_button.png" onclick="closeForm()">
-            </div>
         </div>
     <!-- <div> -->
     <!-- </body> -->
@@ -113,7 +126,8 @@
             // document.getElementById("body_1").style.opacity = "0.2";
             document.getElementById("reg").style.display = "flex";
             document.getElementById("myRegister").style.display = "flex";
-
+			document.documentElement.style.overflow = 'hidden';
+			   document.body.scroll = "no";
             document.getElementById("register_form").reset();
             resetSelect();
             // document.getElementById("myRegister").style.opacity = "1";
@@ -122,6 +136,8 @@
         function closeForm() {
             document.getElementById("reg").style.display = "none";
             document.getElementById("myRegister").style.display = "none";
+			document.documentElement.style.overflow = 'scroll';
+ document.body.scroll = "yes";
         }
 
         function changeSelect() {

@@ -18,11 +18,12 @@
     background-color: white;
     opacity: 0.7;
     z-index: 0;
+	overflow: auto;
 }
 
 .register_popup{
 	background-color: white;
-    display: flex;
+    display: none;
     position: fixed;
     border: 1px groove lightgrey;
     border-radius: 10px;
@@ -36,7 +37,9 @@
 }
 
 .register_container{
+	background-color: none;
 	width: 100%;
+	padding-top: 10%;
     padding: 4%;
 	display: grid;
 	justify-content: center;

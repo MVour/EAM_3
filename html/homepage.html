@@ -10,7 +10,7 @@
 		<link rel= "stylesheet" href="../css/homepage_style.css?v=1.1">
 
 		<script
-		    src="https://code.jquery.com/jquery-3.3.1.js"
+	    	src="https://code.jquery.com/jquery-3.3.1.js"
 		    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			crossorigin="anonymous">
 		</script>
@@ -28,6 +28,27 @@
 
 	<div id="includedContent"></div>
 
+	<!-- COVID OVERL MENU -->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	</div>
+
+	<div id="main">
+		<div class="covbuttcontainer">
+
+		<div class="covidbutton">
+
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; COVID-19</span>
+		</div>
+	</div>
+	</div>
+	<!-- COVID OVERL MENU -->
+
+
 	<div class="Searchrow">
 		<div class="dropdown">
 			<button class="categorybutton">
@@ -43,6 +64,9 @@
 				<a>Συχνές Ερωτήσεις</a>
 			</div>
 		</div>
+
+
+
 		<div class="searchbar">
 			<input  class="searchinput" type="text" name="search" placeholder="Αναζήτηση...">
 			<button class="searchbutton" name="button" style="float:right">
@@ -273,7 +297,34 @@ $(".searchable ul li").hover(function () {
     $(this).closest(".searchable").find("ul li.selected").removeClass("selected");
     $(this).addClass("selected");
 });
+
+	</script>
+
+<script>
+	function openNav() {
+		document.getElementById("reg").style.display = "flex";
+		document.getElementById("reg").style.backgroundColor = "lightgreen";
+
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		document.documentElement.style.overflow = 'hidden';
+   document.body.scroll = "no";
+	}
+
+	function closeNav() {
+		document.getElementById("reg").style.display = "none";
+		document.getElementById("reg").style.backgroundColor = "white";
+
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+		document.body.style.backgroundColor = "white";
+		document.documentElement.style.overflow = 'scroll';
+ document.body.scroll = "yes";
+	}
+
 </script>
+
 
 </body>
 </html>
