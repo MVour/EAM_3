@@ -7,8 +7,35 @@
 <html>
 
 <meta charset="UTF-8">
+<script>
+function openForm() {
+	// document.getElementById("body_1").style.opacity = "0.2";
+	document.getElementById("reg").style.display = "flex";
+	document.getElementById("myRegister").style.display = "flex";
+	document.documentElement.style.overflow = 'hidden';
+	document.body.scroll = "no";
+	document.getElementById("register_form").reset();
+	resetSelect();
+	// document.getElementById("myRegister").style.opacity = "1";
+}
 
-    <!-- <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title> -->
+function closeForm() {
+	document.getElementById("reg").style.display = "none";
+	document.getElementById("myRegister").style.display = "none";
+	document.documentElement.style.overflow = 'scroll';
+	document.body.scroll = "yes";
+}
+
+function changeSelect() {
+	document.getElementById("user_type").style.color = "black";
+}
+
+function resetSelect() {
+	document.getElementById("user_type").style.color = "gray";
+}
+</script>
+
+    <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 
     <!-- BOTH WAYS WORKING (cache issue !!) -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
@@ -50,7 +77,6 @@
 							<input type="submit" value="Είσοδος">
 							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
 						</form>
-
 					</div>
 
 				</div>
@@ -96,32 +122,5 @@
     <!-- </body> -->
 	</head>
 
-    <script>
-        function openForm() {
-            // document.getElementById("body_1").style.opacity = "0.2";
-            document.getElementById("reg").style.display = "flex";
-            document.getElementById("myRegister").style.display = "flex";
-			document.documentElement.style.overflow = 'hidden';
-			   document.body.scroll = "no";
-            document.getElementById("register_form").reset();
-            resetSelect();
-            // document.getElementById("myRegister").style.opacity = "1";
-        }
-
-        function closeForm() {
-            document.getElementById("reg").style.display = "none";
-            document.getElementById("myRegister").style.display = "none";
-			document.documentElement.style.overflow = 'scroll';
- document.body.scroll = "yes";
-        }
-
-        function changeSelect() {
-            document.getElementById("user_type").style.color = "black";
-        }
-
-        function resetSelect() {
-            document.getElementById("user_type").style.color = "gray";
-        }
-    </script>
 
 </html>

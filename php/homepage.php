@@ -19,10 +19,10 @@
 			  $("#footer").load("footer.php");
 			});
 		</script>
+		<div id="header"></div>
 	</head>
 
 	<body>
-		<div id="header"></div>
 
 		<!-- i dont even know what that was..... -->
 		<!-- <div id="includedContent"></div> -->
