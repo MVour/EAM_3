@@ -107,6 +107,9 @@
 					document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 					document.documentElement.style.overflow = 'hidden';
 					document.body.scroll = "no";
+
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
 				}
 
 				function closeNav() {
@@ -139,9 +142,12 @@
 		</div>
 
 		<div id="main">
-			<div class="covbuttcontainer">
-				<span class="covidbutton" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; COVID-19</span>
-			</div>
+			<!-- <div class="covbuttcontainer"> -->
+				<div id="fixedbutton" class="covidbutton" onclick="openNav()">
+					<span>COVID-19</span>
+					<img src="covid_corona_icon_2.png" width="100%" height="100%">
+				</div>
+			<!-- </div> -->
 		</div>
 		<!-- END COVID OVERL MENU END -->
 

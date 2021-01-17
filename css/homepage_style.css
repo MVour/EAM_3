@@ -20,7 +20,7 @@ html, body {
 	display: flex;
     justify-content: center;
 	text-align: center;
-	background-color: palevioletred;
+	/* background-color: palevioletred; */
 	padding-top: 1%;
 	padding-bottom: 1%;
 }
@@ -51,7 +51,7 @@ html, body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: pink;
+  background-color: lightblue;
   /* min-width: 160px; */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -67,7 +67,7 @@ html, body {
 }
 
 .dropdown-content a:hover {
-  background-color: palevioletred;
+  background-color: CadetBlue;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -421,13 +421,25 @@ div.searchable {
 	height: 100%;
 	background-color: red;
 	display: flex;
+	cursor:pointer;
+}
+
+#fixedbutton {
+    position: fixed;
+    top: 60%;
+    right: 0px;
 }
 
 .covidbutton {
-	padding-top: 100%;
-	border-radius: 50%;
+	width: 10%;
+	height: auto;
+	text-align: center;
+	/* padding-top: 100%; */
+	/* border-radius: 50%; */
+	cursor:pointer;
 	position: relative;
-	background-color: blue;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+  	filter: drop-shadow(5px 5px 5px #222);
 }
 
 .covbuttcontent {
