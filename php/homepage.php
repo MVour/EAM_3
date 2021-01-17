@@ -100,10 +100,12 @@
 
 				function openNav() {
 					document.getElementById("reg").style.display = "flex";
-					document.getElementById("reg").style.backgroundColor = "lightgreen";
+					document.getElementById("reg").style.backgroundColor = "lightblue";
 
-					document.getElementById("mySidenav").style.width = "250px";
-					document.getElementById("main").style.marginLeft = "250px";
+					document.getElementById("fixedbutton").style.marginRight = "30%";
+
+					document.getElementById("mySidenav").style.width = "30%";
+					document.getElementById("main").style.marginRight = "30%";
 					document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 					document.documentElement.style.overflow = 'hidden';
 					document.body.scroll = "no";
@@ -115,6 +117,8 @@
 				function closeNav() {
 					document.getElementById("reg").style.display = "none";
 					document.getElementById("reg").style.backgroundColor = "white";
+
+					document.getElementById("fixedbutton").style.marginRight = "0px";
 
 					document.getElementById("mySidenav").style.width = "0";
 					document.getElementById("main").style.marginLeft= "0";
@@ -135,10 +139,9 @@
 		<!-- START COVID OVERL MENU START-->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Clients</a>
-			<a href="#">Contact</a>
+			<a href="#">Ενδεδειγμένες Ενέργειες</a>
+			<a href="#">Επιχείρηση και </a>
+			<a href="#">Κρούσμα στον Εργασιακό Χώρο</a>
 		</div>
 
 		<div id="main">
