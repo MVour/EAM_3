@@ -71,7 +71,7 @@ function resetSelect() {
 						<a href="#">ENG</a>
 					</div>
 					<div class="log_in">
-						<form action="../php/login.php" method="post" autocomplete="on">
+						<form action="../php/login.php" method="post" autocomplete="on" style="float: right;">
 							<input type="text" name="name" placeholder="Όνομα Χρήστη" required><br>
 							<input type="password" name="pswrd" placeholder="Κώδικός" required><br>
 							<input type="submit" value="Είσοδος">

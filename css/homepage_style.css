@@ -1,8 +1,13 @@
 /* SEARCH BAR STYLE */
 
+head {
+	margin: 0;
+	padding: 0;
+}
+
 html, body {
 	max-width: 100%;
-	margin: 0;
+	margin: 0%;
 	transition: background-color .5s;
 }
 
@@ -71,7 +76,7 @@ html, body {
 	text-decoration: none;
 	display: flex;
 	justify-content: flex-start;
-	padding-left: 15px;
+	padding-left: 1%;;
 	align-items: left;
 	font-size: 16px;
 	color: grey;
@@ -104,7 +109,7 @@ html, body {
 
 /* PERSONA STYLE */
 .Personatext {
-	height: 25;
+	height: 25%;
 	width: 16%;
 
 	color: black;
@@ -231,12 +236,13 @@ html, body {
 
 /*  Selection box with search*/
 div.searchable {
-    width: 300px;
-    float: left;
+    width: 40%;
+    float: none;
     margin: 0 15px;
 	background-color: white;
 	/* border: 1px solid #ced4da; */
 	border-radius: .25rem;
+	display: inline-block;
 }
 
 .searchable input {
@@ -301,6 +307,7 @@ div.searchable {
 	width: 40%;
 	height: 100%;
 	background-color: inherit;
+	align-items: center;
 }
 
 .Sbutton {
@@ -333,9 +340,6 @@ div.searchable {
 	height: 300px;
 	display: flex;
 	background-color: white;
-	padding: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
 }
 
 .SimpleContainer {
@@ -343,9 +347,8 @@ div.searchable {
 	height: 250px;
 	display: grid;
 	justify-content: center;
-	/* background-color: pink; */
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 2%;
+	margin-top: 2%;
 }
 
 .Title{

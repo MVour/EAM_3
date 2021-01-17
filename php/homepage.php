@@ -219,7 +219,7 @@
 
 	</body>
 
-	<!-- --------------------------------------------------------- -->
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	function filterFunction(that, event) {
 	    let container, input, filter, li, input_val;
