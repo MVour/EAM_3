@@ -4,7 +4,8 @@
 
     // get_buisness();
 
-    function get_buisness() {
+    // echo"telos";
+    function get_business() {
         $servername = "127.0.0.1";
         $username = "root";
         $password = "patates";
@@ -16,7 +17,6 @@
             die("Connection failed: " . mysqli_connect_error());
         }
         echo "Connected successfully<br>";
-        // alert("SKATA");
         
         $query = $conn->prepare("SELECT * FROM Business");
         $query->execute();
@@ -41,7 +41,6 @@
         // }
 
         $conn->close();
-        // echo"<option value";
         return $b_names;
     }
 ?>

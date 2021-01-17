@@ -51,36 +51,6 @@
     /* padding-right: 20px; */
 }
 
-.register_container h1{
-    color:black;
-    margin-top: 0;
-    padding-top: 0%;
-    margin-bottom: 6px;
-}
-
-.register_container h5{
-    display: inline-block;
-    margin-left: 10%;
-    padding: 10px;
-    letter-spacing: 2px;
-    /* background-color: grey; */
-    border: 1px solid grey;
-    color: black;
-    opacity: 0.8;
-    font-size: 90%;
-
-}
-
-.register_container h6{
-    color: grey;
-    opacity: 0.7;
-    padding-bottom: 2%;
-    font-size: 95%;
-    border-bottom: 2px solid grey;
-    margin-top: 0;
-    padding-top: 0%;
-    margin-bottom: 8px;
-}
 
 .x_button{
     display: flex;
