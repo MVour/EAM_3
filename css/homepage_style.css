@@ -416,13 +416,6 @@ div.searchable {
 
 /* COVID BUTTON */
 
-.covbuttcontainer {
-	width: 10%;
-	height: 100%;
-	background-color: red;
-	display: flex;
-	cursor:pointer;
-}
 
 #fixedbutton {
     position: fixed;
@@ -434,20 +427,11 @@ div.searchable {
 	width: 10%;
 	height: auto;
 	text-align: center;
-	/* padding-top: 100%; */
-	/* border-radius: 50%; */
 	cursor:pointer;
 	position: relative;
 	-webkit-filter: drop-shadow(5px 5px 5px #222);
   	filter: drop-shadow(5px 5px 5px #222);
-}
-
-.covbuttcontent {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+	transition: 0.5s;
 }
 
 .sidenav {
@@ -456,8 +440,8 @@ div.searchable {
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0;
-  background-color: green;
+  right: 0;
+  background-color: CadetBlue;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
