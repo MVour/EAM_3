@@ -78,26 +78,25 @@
             </div>
 
 			<div class="login-container">
-					<!-- <div class="col-2" style="text-align:right;">
-						<div class="" style="top:50%;right:40px;position:absolute;text-align:right;">
-							<p style="color:white;margin-right:10px;display:inline"> Ή</p>
-							<a href= "../html/under_construction.html" style="display:inline;">
-								Είσοδος μέσω TAXIS
-							</a>
-						</div>
-					</div> -->
 				<div class="language-container">
-					<a href="#">ΕΛ</a>
-					<p> || </p>
-					<a href="#">ENG</a>
+					<p style="word-spacing:10%;">
+						<a href="#">ΕΛ</a>
+						<p> || </p>
+						<a href="#">ENG</a>
+					</p>
 				</div>
 				<div class="log_in">
-					<form action="../php/login.php" method="post" autocomplete="on" style="float: right;">
-						<input type="text" name="name" placeholder="Όνομα Χρήστη" required><br>
-						<input type="password" name="pswrd" placeholder="Κώδικός" required><br>
-						<input type="submit" value="Είσοδος">
-						<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
-					</form>
+					<div class="login_form_container" >
+						<form action="../php/login.php" method="post" autocomplete="on">
+							<input type="text" name="name" placeholder="Όνομα Χρήστη" required>
+							<input type="password" name="pswrd" placeholder="Κώδικός" required>
+							<div class="login_submit_container">
+								<input type="submit" style="" value="Είσοδος">
+							
+							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -107,10 +106,11 @@
         <div class="register_popup" id="myRegister">
             <form action="./header.html" id="register_form" class="register_container">
                 <h1><b>Εγγραφή</b></h1>
-                <h6>Εύκολα και γρήγορα!</h6>
-				<div class="x_button">
-					<img role="button" src="../include/images/x_button.png" onclick="closeForm()">
-				</div>
+				<h6>Εύκολα και γρήγορα!</h6>
+					<div class="x_button">
+						<img role="button" src="../include/images/x_button.png" onclick="closeForm()">
+					</div>
+				
 					<div class="together">
 						<input type="text" placeholder="Επώνυμο" name="l_name" required style="width:44%;">
 						<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
