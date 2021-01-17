@@ -1,11 +1,12 @@
 .register_button{
-    display: inline-block;
+    display: inline;
     /* color: grey; */
     color: white;
     opacity: 0.9;
-    margin-top: 8%;
+    margin-top: 20%;
     margin-left: 8%;
     cursor:pointer;
+	background-color: pink;
 }
 
 .register {

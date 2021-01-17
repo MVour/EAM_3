@@ -1,20 +1,44 @@
+.login-container {
+	width: 55%;
+	height:100%;
+	align-items: center;
+	/* display: flex; */
+	padding-right: 0;
+	background-color: pink;
+}
+
+.language-container {
+	width: 50%;
+	height: 20%;
+	margin-left: 50%;
+	margin-top: 0;
+	background-color: green;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	color: grey;
+}
 
   .log_in {
-	  height: 100%;
-	  width: 100%;
-	  margin-bottom: 5px;
+	  margin-left: 50%;
+	  margin-right: 10%;
+	  height: 80%;
+	  width: 50%;
+	  display: flex;
+	  /* padding: 10%; */
 	  background-color: blue;
   }
 
   .log_in input[type=text], .log_in input[type=password], .log_in select, .log_in textarea {
-    width: 100%;
-    padding: 12px;
+    width: 60%;
+	height: 30%;
     border: 1px solid #ccc;
     border-radius: 4px;
     /* resize: vertical; */
     background-color: white;
     font-size: 80%;
-    margin-bottom: 2px;
+    margin-top: 1%;
+	margin-bottom: 1%;
   }
 
   .log_in input[type=text]:hover, .log_in input[type=password]:hover {

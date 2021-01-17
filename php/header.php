@@ -8,7 +8,7 @@
 
 <meta charset="UTF-8">
 
-    <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
+    <!-- <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title> -->
 
     <!-- BOTH WAYS WORKING (cache issue !!) -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
@@ -17,72 +17,47 @@
         <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
 
-    <body id="body_1">
+    <!-- <body id="body_1"> -->
         <div class="myheader">
-            <div class="col-2">
+			<div class="logoimgtxtcontainer">
                 <div clas="myhLogo">
                     <a href= "../php/hello.php">
-                        <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;">
+                        <img class="logoimg" src = "../include/images/logo.jpg">
+						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
                     </a>
                 </div>
+                <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
             </div>
-            <div class="col-5">
-                <div class="myh1">
-                    <a href= "../php/hello.php" style="text-decoration:none;">
-                        <p style="letter-spacing:2px;">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
-                    </a>
-                </div>
-            </div>
-
-
-			<!-- COVID OVERL MENU -->
-			<div id="myNav" class="Covidover">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<div class="Covidover-content">
-					<a href="#">About</a>
-					<a href="#">Services</a>
-					<a href="#">Clients</a>
-					<a href="#">Contact</a>
-				</div>
-			</div>
-			<!-- COVID Covidover MENU -->
-
-            <div class="col-2" style="text-align:right;">
-                <div class="myh2" style="word-spacing:15px;font-size:10px;transform:translateY(-200%);" >
-                    <p>
-                        <a href="../php/gr.php" style="display:inline;">ΕΛ</a>
-
-                        ||
-                        <!-- <p style="display:inline;margin-right:2px;margin-left:px;">||</p> -->
-
-                        <a href="../php/eng.php" style="display:inline;">ENG</a>
-                    </p>
-                </div>
 
 				<div class="login-container">
-
-					<div class="col-2" style="text-align:right;">
+					<!-- <div class="col-2" style="text-align:right;">
 						<div class="" style="top:50%;right:40px;position:absolute;text-align:right;">
 							<p style="color:white;margin-right:10px;display:inline"> Ή</p>
 							<a href= "../html/under_construction.html" style="display:inline;">
 								Είσοδος μέσω TAXIS
 							</a>
 						</div>
+					</div> -->
+					<div class="language-container">
+						<a href="#">ΕΛ</a>
+						<p> || </p>
+						<a href="#">ENG</a>
 					</div>
 					<div class="log_in">
 						<form action="../php/login.php" method="post" autocomplete="on">
-							<input type="text" name="name" placeholder="Όνομα Χρήστη" style="height:0px;width:150px;" required><br>
-							<input type="password" name="pswrd" placeholder="Κώδικός" style="height:0px;width:150px;" required><br>
+							<input type="text" name="name" placeholder="Όνομα Χρήστη" required><br>
+							<input type="password" name="pswrd" placeholder="Κώδικός" required><br>
 							<input type="submit" value="Είσοδος">
 							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
 						</form>
+
 					</div>
 
 				</div>
+			</div>
 
-            </div>
-        </div>
-    </body>
+            <!-- </div> -->
+    <!-- </body> -->
     <div class="register" id="reg">
         </div>
         <div class="register_popup" id="myRegister">

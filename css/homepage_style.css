@@ -408,6 +408,9 @@ div.searchable {
 
 .covbuttcontainer {
 	width: 10%;
+	height: 10%;
+	background-color: red;
+	display: flex;
 }
 
 .covidbutton {
@@ -415,6 +418,7 @@ div.searchable {
 	border-radius: 50%;
 	border: 2px solid green;
 	position: relative;
+	background-color: blue;
 }
 
 .covbuttcontent {

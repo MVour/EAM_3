@@ -7,11 +7,14 @@
     head{
         margin: 0;
         padding: 0;
-		height: 50%;
+		height: 100%;
     }
 
     html, body{
-        margin: 0;
+		width: 100%;
+        margin-right: 0;
+		height: 50%;
+		padding: 0;
 		/* padding: 0; */
     }
 
@@ -22,10 +25,10 @@
         background-image: linear-gradient(to right, whitesmoke, rgb(107, 145, 214));
         background-size: cover;
         background-clip: initial;
-        display: table;
+        display: flex;
         width: 100%;
         position: relative;
-		height: 25%;
+		height: 100%;
     }
 
     .myheader img{
@@ -33,7 +36,7 @@
     }
 
     [class*="col-"] {
-        padding: 15px;
+        padding-top: 5%;
         display:table-cell;
     }
 
@@ -65,15 +68,42 @@
         alt: Logo;
     }
 
+	.logoimgtxtcontainer {
+		width: 45%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		background-color: red;
+	}
+
     .myhLogo img{
-        position: absolute;
+        /* position: absolute; */
+		position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
 
+	.logoimg {
+		/* float: right; */
+		height: 50%;
+		width: 100%;
+		margin-left: 25%;
+		/* margin: 30%; */
+	}
+
+	.logotxt {
+		padding: 10%;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-weight: 1000;
+		font-size: 25px;
+		color: rgb(103, 141, 171);
+	}
+
+
     .myh1{
         float: left;
-        position: absolute;
+		position: relative;
+        /* position: absolute; */
         top: 50%;
         transform: translateY(-50%);
     }
@@ -84,6 +114,7 @@
         font-size: 30px;
         /* color: blue; */
         color: white;
+		margin: 5%;
     }
 
 
@@ -157,11 +188,4 @@
   .navbar a:hover {
     background-color: #ddd;
     color: black;
-  }
-
-  .login-container {
-	  width: 100%;
-	  height: 100%;
-	  align-items: center;
-	  display: flex;
   }
