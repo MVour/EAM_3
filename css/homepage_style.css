@@ -38,6 +38,7 @@ html, body {
 	padding-bottom: 1%;
 }
 
+
 .dropdown {
 	width: 15%;
 	height: 100%;
@@ -127,7 +128,6 @@ html, body {
 .Personatext {
 	height: 5%;
 	width: 16%;
-
 	color: black;
 	text-align: center;
 	/* background-color: papayawhip; */

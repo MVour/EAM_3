@@ -82,6 +82,9 @@
 
 	</script>
 
+	<div class="register" id="reg">		
+	</div>
+
 	<head>
 
 		<link rel= "stylesheet" href="../css/homepage_style.css?v=1.1">
@@ -127,18 +130,6 @@
 					document.body.scroll = "yes";
 				}
 
-				// header remains at top when scrolling
-				// window.scroll(function(){
-				//     if (window.scrollTop() >= 10%) {
-				//         Searchrow.addClass('sticky2');
-				//         // $('nav div').addClass('visible-title');
-				//     }
-				//     else {
-				//         Searchrow.removeClass('sticky2');
-				//         // $('nav div').removeClass('visible-title');
-				//     }
-				// });
-
 		</script>
 
 		<div class="sticky" id="header"></div>
@@ -168,20 +159,16 @@
 		<!-- END COVID OVERL MENU END -->
 
 		<div class="Searchrow" id="SearchRow">
-			<div class="dropdown">
-				<button class="categorybutton">
-					<p>Κατηγορίες Αναζήτησης</p>
-				</button>
-				<div class="dropdown-content">
-					<a>COVID-19</a>
-					<a>e-Υπηρεσίες</a>
-					<a>Προγράμματα και Δράσεις</a>
-					<a>Δικαιολογητικά</a>
-					<a>Νέα και Ενημέρωση</a>
-					<a>Νομικά</a>
-					<a>Συχνές Ερωτήσεις</a>
-				</div>
-			</div>
+			<select id="search_category" name="search_category" style="width:15%;color:grey" onclick="changeSelect();" onclick="check_UserType();">
+				<option value="0" disabled selected>Κατηγορίες Αναζήτησης</option>
+				<option value="1">COVID-19</option>
+				<option value="2">e-Υπηρεσίες</option>
+				<option value="3">Προγράμματα και Δράσεις</option>
+				<option value="4">Δικαιολογητικά</option>
+				<option value="5">Νέα και Ενημέρωση</option>
+				<option value="6">Νομικά</option>
+				<option value="7">Συχνές Ερωτήσεις</option>
+			</select>
 
 			<div class="searchbar">
 				<input  class="searchinput" type="text" name="search" placeholder="Αναζήτηση...">

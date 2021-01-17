@@ -78,21 +78,21 @@
             </div>
 
 			<div class="login-container">
-				<div class="language-container">
+				<div class="language-container" style="border:2px solid red;">
 					<p style="word-spacing:10%;">
 						<a href="#">ΕΛ</a>
 						<p> || </p>
 						<a href="#">ENG</a>
 					</p>
 				</div>
-				<div class="log_in">
+				<div class="log_in" style="border:2px solid red;">
 					<div class="login_form_container" >
 						<form action="../php/login.php" method="post" autocomplete="on">
 							<input type="text" name="name" placeholder="Όνομα Χρήστη" required>
 							<input type="password" name="pswrd" placeholder="Κώδικός" required>
 							<div class="login_submit_container">
 								<input type="submit" style="" value="Είσοδος">
-							
+
 							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
 							</div>
 						</form>
@@ -105,12 +105,16 @@
         </div>
         <div class="register_popup" id="myRegister">
             <form action="./header.html" id="register_form" class="register_container">
-                <h1><b>Εγγραφή</b></h1>
-				<h6>Εύκολα και γρήγορα!</h6>
+				<div class="alone">
+					<h1><b>Εγγραφή</b></h1>
+				</div>
+				<div class="alone">
+					<h6>Εύκολα και γρήγορα!</h6>
+				</div>
 					<div class="x_button">
 						<img role="button" src="../include/images/x_button.png" onclick="closeForm()">
 					</div>
-				
+
 					<div class="together">
 						<input type="text" placeholder="Επώνυμο" name="l_name" required style="width:44%;">
 						<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
@@ -150,7 +154,10 @@
 							</select>
 						</div>
 					</div>
+				<div class="alone">
+					<p>EGGRAFH</p>
 					<input type="submit" value="Εγγραφή" style="height:60%; text-align:center;">
+				</div>
             </form>
         </div>
 </html>

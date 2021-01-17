@@ -24,7 +24,6 @@
     background-color: white;
     opacity: 0.7;
     z-index: 0;
-	overflow: auto;
 }
 
 .register_popup{
@@ -44,7 +43,7 @@
 
 .register_container{
 	background-color: none;
-	width: 100%;
+	width: auto;
 	padding-top: 10%;
     padding: 4%;
 	display: grid;
@@ -119,7 +118,7 @@
 }
 
 .alone {
-	/* background-color: blue; */
+	background-color: blue;
 	width: inherit;
 	padding-left: 4%;
 	padding-right: 4%;
