@@ -29,6 +29,9 @@ body{
     width: 100%;
     position: relative;
     max-height: 30%;
+    /* border-image: linear-gradient(to right, whitesmoke, rgb(107, 145, 214)); */
+    
+    border-bottom: 2px solid rgb(105, 157, 161);
 }
 
 .myheader img{
@@ -133,31 +136,4 @@ a:hover {
     display: table;
     width: 100%;
     /* position: relative; */
-}
-
-/* Style the top navigation bar */
-.navbar {
-overflow: hidden;
-background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-float: left;
-display: block;
-color: white;
-text-align: center;
-padding: 14px 20px;
-text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-background-color: #ddd;
-color: black;
 }

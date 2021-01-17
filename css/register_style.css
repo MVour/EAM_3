@@ -19,6 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -29,8 +30,9 @@
 
 .register_popup{
 	background-color: white;
-    display: none;
-    position: fixed;
+    /* grid-template-areas: 'left mid1 mid2 right'; */
+    position: absolute;
+    display: block;
     border: 1px groove lightgrey;
     border-radius: 10px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -38,62 +40,67 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 27%;
-    height: 70%;
+    max-height: 80%;
     z-index: 1;
 }
 
-.register_container{
-	background-color: none;
-	width: 100%;
-	padding-top: 10%;
-    padding: 4%;
-	display: grid;
-	justify-content: center;
-    /* padding-right: 20px; */
+.register_welcome {
+    width: 100%;
+    height: 15%;
+    border-bottom: 4px solid grey;
+
 }
 
-.register_container h1{
-    color:black;
-    margin-top: 0;
-    padding-top: 0%;
-    margin-bottom: 6px;
+.register_welcome1{
+    /* display: flex; */
+    font-size: 200%;
+    padding-top: 4%;
+    padding-left: 5%;
 }
 
-.register_container h5{
-    display: inline-block;
-    margin-left: 10%;
-    padding: 10px;
-    letter-spacing: 2px;
-    /* background-color: grey; */
-    border: 1px solid grey;
-    color: black;
-    opacity: 0.8;
+
+.register_welcome2{
     font-size: 90%;
-
+    padding-top: 5%;
+    padding-left: 5%;
+    /* display: flex; */
+    
 }
 
-.register_container h6{
-    color: grey;
-    opacity: 0.7;
-    padding-bottom: 2%;
-    font-size: 95%;
-    border-bottom: 2px solid grey;
-    margin-top: 0;
-    padding-top: 0%;
-    margin-bottom: 8px;
+
+.register_popup > div{
+    /* background-color: pink; */
 }
+
+
+.register_popup > form{
+    max-width: 100%;
+    /* background-color: pink; */
+}
+
+
+.register_container{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: 75%;
+    padding: 6%;
+}
+
 
 .x_button{
-    display: flex;
+    /* display: flex; */
     position: absolute;
     float: right;
-    top: 3%;
+    /* top: 3%; */
+    margin-top: 3%;
     right: 5%;
     width: 7%;
     height: 4%;
     min-height: 5%;
+    min-width: 5%;
     /* border: 2px solid red; */
-    object-fit: fill;
+    /* object-fit: fill; */
 }
 
 
@@ -108,34 +115,14 @@
     cursor: pointer;
 }
 
-.together {
-	width: 100%;
-	display: flex;
-	padding-left: 4%;
-	padding-right: 4%;
-	height: 100%;
-	margin-bottom: 0;
-	/* background-color: palevioletred; */
-}
-
-.alone {
-	/* background-color: blue; */
-	width: inherit;
-	padding-left: 4%;
-	padding-right: 4%;
-	height: 100%;
-	padding-top: 0;
-	padding-bottom: 0;
-}
 
 .register_container input, .register_container select{
-    margin-top: 10px;
-    margin-inline-end: 7px;
     border: 3px solid #ccc;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
     border-radius: 5px;
 	align-items: center;
-	width: 90%;
+    width: 40%;
+    margin-top: 4%;
 	height: 70%;
 	padding: 2%;
 	text-align: left;
@@ -145,24 +132,21 @@
     border: 3px solid #555;
     background-color: whitesmoke;
 }
-
-.register_container input:hover{
+.register_container input:hover ,.register_container select:hover{
     border: 3px solid #555;
-    background-color: #555;
+    background-color: rgb(219, 179, 179);
 }
 
 .register_container input[type=submit]{
-    display: absolute;
-    margin-left: 15%;
-    background-color: #44b84a;
-    color: rgb(255, 255, 255);
-    border: none;
-    width: 70%;
-    height: 10%;
-    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #555;
+    text-align: center;
+    background-color: rgb(2, 185, 2);
 }
 
-.register_container input[type=submit]:hover {
-    background-color: #43a547;
-    color: rgb(172, 194, 166);
+.register_container input[type=submit]:hover{
+    background-color: rgb(12, 144, 12);
+    border:2px solid grey;
 }
