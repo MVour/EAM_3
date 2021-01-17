@@ -126,9 +126,22 @@
 					document.documentElement.style.overflow = 'scroll';
 					document.body.scroll = "yes";
 				}
+
+				// header remains at top when scrolling
+				// window.scroll(function(){
+				//     if (window.scrollTop() >= 10%) {
+				//         Searchrow.addClass('sticky2');
+				//         // $('nav div').addClass('visible-title');
+				//     }
+				//     else {
+				//         Searchrow.removeClass('sticky2');
+				//         // $('nav div').removeClass('visible-title');
+				//     }
+				// });
+
 		</script>
 
-		<div id="header"></div>
+		<div class="sticky" id="header"></div>
 	</head>
 
 	<body>
@@ -154,7 +167,7 @@
 		</div>
 		<!-- END COVID OVERL MENU END -->
 
-		<div class="Searchrow">
+		<div class="Searchrow" id="SearchRow">
 			<div class="dropdown">
 				<button class="categorybutton">
 					<p>Κατηγορίες Αναζήτησης</p>
