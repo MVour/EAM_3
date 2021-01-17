@@ -118,8 +118,6 @@ function resetSelect() {
 					<input type="submit" value="Εγγραφή" style="height:60%; text-align:center;">
             </form>
         </div>
-    <!-- <div> -->
-    <!-- </body> -->
 	</head>
 
 
