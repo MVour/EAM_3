@@ -1,12 +1,17 @@
 .register_button{
-    display: inline;
-    /* color: grey; */
+    display: inline-block;
+    /* max-width: 30%; */
+    /* max-height: auto; */
+    /* position: absolute; */
+    /* padding: 50%; */
     color: white;
     opacity: 0.9;
-    margin-top: 20%;
-    margin-left: 8%;
+    align-content: center;
+    justify-content: center;
     cursor:pointer;
-	background-color: pink;
+    background-color: pink;
+    /* vertical-align: middle; */
+    text-align: center;
 }
 
 .register {
@@ -79,19 +84,28 @@
 }
 
 .x_button{
-    display: block;
+    display: flex;
     position: absolute;
-    margin-left: 75%;
-    max-width: 20%;
-    max-height: 20%;
-    padding: 15px;
-    cursor: pointer;
+    float: right;
+    top: 3%;
+    right: 5%;
+    width: 7%;
+    height: 4%;
+    min-height: 5%;
+    /* border: 2px solid red; */
+    object-fit: fill;
 }
 
+
 .x_button img{
-    float: right;
-    height: 30%;
-    width: 15%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-right: auto; */
+    margin-left: auto;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
 }
 
 .together {
