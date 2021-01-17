@@ -6,34 +6,55 @@
     <!DOCTYPE html>
 <html>
 
-<meta charset="UTF-8">
-<script>
-function openForm() {
-	// document.getElementById("body_1").style.opacity = "0.2";
-	document.getElementById("reg").style.display = "flex";
-	document.getElementById("myRegister").style.display = "flex";
-	document.documentElement.style.overflow = 'hidden';
-	document.body.scroll = "no";
-	document.getElementById("register_form").reset();
-	resetSelect();
-	// document.getElementById("myRegister").style.opacity = "1";
-}
+	<meta charset="UTF-8">
+	<script>
+		function openForm() {
+			// document.getElementById("body_1").style.opacity = "0.2";
+			document.getElementById("reg").style.display = "flex";
+			document.getElementById("myRegister").style.display = "flex";
+			document.documentElement.style.overflow = 'hidden';
+			document.body.scroll = "no";
+			document.getElementById("register_form").reset();
+			resetSelect();
+			// document.getElementById("myRegister").style.opacity = "1";
+		}
 
-function closeForm() {
-	document.getElementById("reg").style.display = "none";
-	document.getElementById("myRegister").style.display = "none";
-	document.documentElement.style.overflow = 'scroll';
-	document.body.scroll = "yes";
-}
+		function closeForm() {
+			document.getElementById("reg").style.display = "none";
+			document.getElementById("myRegister").style.display = "none";
+			document.documentElement.style.overflow = 'scroll';
+			document.body.scroll = "yes";
+		}
 
-function changeSelect() {
-	document.getElementById("user_type").style.color = "black";
-}
+		function changeSelect() {
+			document.getElementById("user_type").style.color = "black";
+		}
 
-function resetSelect() {
-	document.getElementById("user_type").style.color = "gray";
-}
-</script>
+		function resetSelect() {
+			document.getElementById("user_type").style.color = "gray";
+		}
+
+		function check_UserType() {
+				if(document.getElementById("user_type").value == "1"){
+					document.getElementById("add_b").style.display = "inline-block";
+					document.getElementById("select_b").style.display = "none";
+				}
+				else if(document.getElementById("user_type").value == "2"){
+					document.getElementById("select_b").style.display = "inline-block";
+					document.getElementById("add_b").style.display = "none";
+				}
+				else{
+					reset_buisness();
+				}
+
+		}
+
+		function reset_buisness(){
+			document.getElementById("select_b").style.display = "none";
+			document.getElementById("add_b").style.display = "none";
+		}
+
+	</script>
 
     <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 
@@ -44,19 +65,19 @@ function resetSelect() {
         <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
 
-    <!-- <body id="body_1"> -->
+    	<!-- <body id="body_1"> -->
         <div class="myheader">
 			<div class="logoimgtxtcontainer">
-                <div clas="myhLogo">
+                <div class="myhLogo">
                     <a href= "../php/hello.php">
-                        <img class="logoimg" src = "../include/images/logo.jpg">
+                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
 						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
                     </a>
                 </div>
                 <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
             </div>
 
-				<div class="login-container">
+			<div class="login-container">
 					<!-- <div class="col-2" style="text-align:right;">
 						<div class="" style="top:50%;right:40px;position:absolute;text-align:right;">
 							<p style="color:white;margin-right:10px;display:inline"> Ή</p>
@@ -65,25 +86,22 @@ function resetSelect() {
 							</a>
 						</div>
 					</div> -->
-					<div class="language-container">
-						<a href="#">ΕΛ</a>
-						<p> || </p>
-						<a href="#">ENG</a>
-					</div>
-					<div class="log_in">
-						<form action="../php/login.php" method="post" autocomplete="on" style="float: right;">
-							<input type="text" name="name" placeholder="Όνομα Χρήστη" required><br>
-							<input type="password" name="pswrd" placeholder="Κώδικός" required><br>
-							<input type="submit" value="Είσοδος">
-							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
-						</form>
-					</div>
-
+				<div class="language-container">
+					<a href="#">ΕΛ</a>
+					<p> || </p>
+					<a href="#">ENG</a>
+				</div>
+				<div class="log_in">
+					<form action="../php/login.php" method="post" autocomplete="on" style="float: right;">
+						<input type="text" name="name" placeholder="Όνομα Χρήστη" required><br>
+						<input type="password" name="pswrd" placeholder="Κώδικός" required><br>
+						<input type="submit" value="Είσοδος">
+						<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
+					</form>
 				</div>
 			</div>
-
-            <!-- </div> -->
-    <!-- </body> -->
+		</div>
+	</head>
     <div class="register" id="reg">
         </div>
         <div class="register_popup" id="myRegister">
@@ -107,18 +125,32 @@ function resetSelect() {
 						<input type="text" placeholder="Κωδικός" name="psswrd" required style="width:44%;">
 						<input type="text" placeholder="Επιβεβαίωση Κωδικού" name="" required style="width:44%;">
 					</div>
-					<div class="alone">
+					<div class="together">
 						<select id="user_type" name="user_type" style="width:90%;color:gray" onclick="changeSelect()">
 							<option value="" hidden style="display:none">Κατηγορία Χρήστη</option>
 							<option value="1">Εργοδότης</option>
 							<option value="2">Εργαζόμενος</option>
 							<option value="3">'Ανεργος</option>
 						</select>
+						<div class="together" style="border:2px solid red;">
+							<select id="user_type" name="user_type" style="width:44%;color:gray" onclick="changeSelect();check_UserType();">
+								<option value="" hidden style="display:none">Κατηγορία Χρήστη</option>
+								<option value="1">Εργοδότης</option>
+								<option value="2">Εργαζόμενος</option>
+								<option value="3">'Ανεργος</option>
+							</select>
+							<input type="text" placeholder="Δήλωση Επιχείρησης" id="add_b" name="add_b" class="add_business" style="width:44%;">
+							<select id="select_b" name="select_b" class="select_business;" style="width:44%;" onChange="changeSelect();">
+								<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
+								<?php
+									include("../php/main_functs.php");
+									get_business();
+								?>
+								<option value="1">#1</option>
+							</select>
+						</div>
 					</div>
 					<input type="submit" value="Εγγραφή" style="height:60%; text-align:center;">
             </form>
         </div>
-	</head>
-
-
 </html>
