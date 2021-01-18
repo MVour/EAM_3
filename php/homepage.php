@@ -131,7 +131,7 @@
 				}
 
 		</script>
-	</head>	
+	</head>
 		<div class="sticky" id="header"></div>
 		<body>
 

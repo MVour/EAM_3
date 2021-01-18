@@ -17,6 +17,13 @@ body {
 	padding: 8%;
 }
 
+.Col_1 {
+	width: 40%;
+	display: contents;
+	margin-left: 8%;
+	background-color: red;
+}
+
 #googleMap {
 	height: 100%;
 }
@@ -25,7 +32,8 @@ body {
 	width: 40%;
 	height: 40%;
 	background-color: pink;
-	margin-left: 8%;
+	/* margin-left: 8%; */
+	margin-bottom: 5%;
 }
 
 
@@ -40,14 +48,14 @@ body {
 	padding-top: 1%;
 	padding-bottom: 1%;
 	font-size: 35px;
-	margin-left: 8%;
+	/* margin-left: 8%; */
 }
 
 .InfoTableContainer {
 	width: 40%;
 	height: 20%;
 	background-color: lightblue;
-	margin-left: 8%;
+	/* margin-left: 8%; */
 	align-content: flex-start;
 }
 
@@ -78,9 +86,8 @@ body {
 
 .EContactTableContainer {
 	width: 40%;
-	height: 10%;
+	height: 20%;
 	background-color: lightblue;
-	margin-left: 8%;
-	align-content: flex-start;
-	display: inline;
+	/* margin-left: 8%; */
+	display: flex;
 }
