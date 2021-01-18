@@ -115,6 +115,7 @@
     ?>
 
     
+    <div id="footer"></div>
 </html>
 
 </homepage>

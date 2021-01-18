@@ -90,12 +90,12 @@
         <div class="myheader">
 			<div class="logoimgtxtcontainer">
                 <div class="myhLogo">
-                    <a href= "../php/hello.php">
+                    <a href= "../php/homepage.php">
                         <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
 						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
                     </a>
                 </div>
-                <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
+                <p class="logotxt"><a href="homepage.php">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</a></p>
             </div>
 
 			<div class="login-container">

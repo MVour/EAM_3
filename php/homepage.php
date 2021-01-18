@@ -151,7 +151,7 @@
 			<!-- <div class="covbuttcontainer"> -->
 				<div id="fixedbutton" class="covidbutton" onclick="openNav()">
 					<span>COVID-19</span>
-					<img src="covid_corona_icon_2.png" width="100%" height="100%">
+					<img src="covid_corona_icon_2.png" width="80%" height="80%"></img>
 				</div>
 			<!-- </div> -->
 		</div>
@@ -327,7 +327,7 @@
 
 	</body>
 
-
+	<div id="footer"></div>
 
 
 

@@ -3,7 +3,7 @@
 <html lang="gr" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<link rel= "stylesheet" href="../css/homepage_style.css?v=1.1">
+		<!-- <link rel= "stylesheet" href="../css/homepage_style.css?v=1.1"> -->
 		<link rel= "stylesheet" href="../css/contact.css?v=1.1">
 
 		<script
@@ -115,7 +115,7 @@
 
 				<div class="SecondContainer">
 					<div class="ThirdContainer" id="rightborder">
-						
+						NO INFO
 					</div>
 					<div class="ThirdContainer">
 						<div class="FisrtsContainer" id="DepInfo">
@@ -139,6 +139,9 @@
 		</div>
 
 </body>
+
+
+<div id="footer"></div>
 </html>
 
 </contact>
