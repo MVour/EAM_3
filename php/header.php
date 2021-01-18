@@ -36,23 +36,42 @@
 		}
 
 		function check_UserType() {
-				if(document.getElementById("user_type").value == "1"){
-					document.getElementById("add_b").style.display = "inline-block";
-					document.getElementById("select_b").style.display = "none";
-				}
-				else if(document.getElementById("user_type").value == "2"){
-					document.getElementById("select_b").style.display = "inline-block";
-					document.getElementById("add_b").style.display = "none";
-				}
-				else{
-					reset_buisness();
-				}
+			if(document.getElementById("user_type").value == "1"){
+				document.getElementById("add_b").style.display = "inline-block";
+				document.getElementById("select_b").style.display = "none";
+			}
+			else if(document.getElementById("user_type").value == "2"){
+				document.getElementById("select_b").style.display = "inline-block";
+				document.getElementById("add_b").style.display = "none";
+			}
+			else{
+				reset_buisness();
+			}
 
 		}
 
 		function reset_buisness(){
 			document.getElementById("select_b").style.display = "none";
 			document.getElementById("add_b").style.display = "none";
+		}
+
+		function confirm_pass(){
+			if (document.getElementById('psswrd').value == document.getElementById('psswrd_confirm').value) {
+				document.getElementById('psswrd_confirm').style.border = '2px solid green';
+				document.getElementById('psswrd').style.border = '2px solid green';
+				document.getElementById('err_mssg').style.color = 'green';
+				document.getElementById('err_mssg').innerHTML = '';
+				document.getElementById('submit_reg').disabled = "False";
+			}
+			else {	
+				document.getElementById('err_mssg').style.color = 'red';
+				document.getElementById('psswrd').style.border = 'none';
+				document.getElementById('psswrd_confirm').style.border = 'none';
+				document.getElementById('psswrd').style.border = '2px solid red';
+				document.getElementById('psswrd_confirm').style.border = '2px solid red';
+				document.getElementById('err_mssg').innerHTML = 'Οι κωδικοί πρέπει να είναι οι ίδιοι';
+				document.getElementById('submit_reg').disabled = "True";
+			}
 		}
 
 	</script>
@@ -118,9 +137,10 @@
 				
 				<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
 				<input type="text" placeholder="E-mail" name="email" required><br>
-				<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Αριθμός Κινητού"required><br>
-				<input type="text" placeholder="Κωδικός" name="psswrd" required style="width:44%;">
-				<input type="text" placeholder="Επιβεβαίωση Κωδικού" name="" required style="width:44%;">
+				<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Αριθμός Κινητού"required><br>
+				<input type="password" id="psswrd" placeholder="Κωδικός" name="psswrd" onChange='confirm_pass();' required style="width:44%;">
+				<input type="password" id="psswrd_confirm" placeholder="Επιβεβαίωση Κωδικού" name="psswrd_confirm" required onChange='confirm_pass();' style="width:44%;"><br>
+				<span id="err_mssg"></span>
 				<select id="user_type" name="user_type" style="width:44%;color:gray" onChange="changeSelect();check_UserType();">
 					<option value="" hidden style="display:none">Κατηγορία Χρήστη</option>
 					<option value="1">Εργοδότης</option>
@@ -136,7 +156,7 @@
 							$mpla = get_business();
 						?>
 					</select>
-				<input type="submit" value="Εγγραφή">
+				<input type="submit" id="submit_reg" value="Εγγραφή">
 
 				</form>
 		</div>
