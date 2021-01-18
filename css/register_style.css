@@ -1,1 +1,152 @@
-.
+.register_button{
+    display: inline-block;
+    /* max-width: 30%; */
+    /* max-height: auto; */
+    /* position: absolute; */
+    /* padding: 50%; */
+    color: white;
+    opacity: 0.9;
+    align-content: center;
+    justify-content: center;
+    cursor:pointer;
+    background-color: pink;
+    /* vertical-align: middle; */
+    text-align: center;
+}
+
+.register {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    z-index: 0;
+	/* overflow: auto; */
+}
+
+.register_popup{
+	background-color: white;
+    /* grid-template-areas: 'left mid1 mid2 right'; */
+    position: absolute;
+    display: block;
+    border: 1px groove lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27%;
+    max-height: 80%;
+    z-index: 1;
+}
+
+.register_welcome {
+    width: 100%;
+    height: 15%;
+    border-bottom: 4px solid grey;
+
+}
+
+.register_welcome1{
+    /* display: flex; */
+    font-size: 200%;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+
+.register_welcome2{
+    font-size: 90%;
+    padding-top: 5%;
+    padding-left: 5%;
+    /* display: flex; */
+
+}
+
+
+.register_popup > div{
+    /* background-color: pink; */
+}
+
+
+.register_popup > form{
+    max-width: 100%;
+    /* background-color: pink; */
+}
+
+
+.register_container{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: 75%;
+    padding: 6%;
+}
+
+
+.x_button{
+    /* display: flex; */
+    position: absolute;
+    float: right;
+    /* top: 3%; */
+    margin-top: 3%;
+    right: 5%;
+    width: 7%;
+    height: 4%;
+    min-height: 5%;
+    min-width: 5%;
+    /* border: 2px solid red; */
+    /* object-fit: fill; */
+}
+
+
+.x_button img{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-right: auto; */
+    margin-left: auto;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.register_container input, .register_container select{
+    border: 3px solid #ccc;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+	align-items: center;
+    width: 40%;
+    margin-top: 4%;
+	height: 70%;
+	padding: 2%;
+	text-align: left;
+}
+
+.register_container input:focus{
+    border: 3px solid #555;
+    background-color: whitesmoke;
+}
+.register_container input:hover ,.register_container select:hover{
+    border: 3px solid #555;
+    background-color: rgb(219, 179, 179);
+}
+
+.register_container input[type=submit]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #555;
+    text-align: center;
+    background-color: rgb(2, 185, 2);
+}
+
+.register_container input[type=submit]:hover{
+    background-color: rgb(12, 144, 12);
+    border:2px solid grey;
+}
