@@ -132,7 +132,8 @@
 
 		</script>
 	</head>
-		<div class="sticky" id="header"></div>
+
+		<div id="header"></div>
 		<body>
 
 		<!-- i dont even know what that was..... -->
@@ -235,6 +236,7 @@
 				</div>
 		</div>
 
+		<!-- J+E SEARCH -->
 		<div class="JESearchRow">
 			<div class="JESearchContainer">
 				<p class="FSTitle">Αναζήτηση Θέσεων Εργασίας</p>

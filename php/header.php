@@ -12,19 +12,19 @@
 			// document.getElementById("body_1").style.opacity = "0.2";
 			document.getElementById("reg").style.display = "flex";
 			document.getElementById("myRegister").style.display = "block";
-			// document.documentElement.style.overflow = 'hidden';
-			document.body.scroll = "no";
+
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+			document.documentElement.style.overflow = 'hidden';
 			document.getElementById("register_form").reset();
 			resetSelect();
 			reset_buisness();
-			// document.getElementById("myRegister").style.opacity = "1";
 		}
 
 		function closeForm() {
 			document.getElementById("reg").style.display = "none";
 			document.getElementById("myRegister").style.display = "none";
 			document.documentElement.style.overflow = 'scroll';
-			document.body.scroll = "yes";
 		}
 
 		function changeSelect() {
@@ -81,6 +81,7 @@
     <!-- BOTH WAYS WORKING (cache issue !!) -->
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
     <head>
+		<div class="sticky">
         <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
@@ -120,6 +121,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</head>
 
 	<div class="register" id="reg"></div>
@@ -150,6 +152,7 @@
 				</select>
 
 					<input type="text" placeholder="Δήλωση Επιχείρησης" id="add_b" name="add_b" style="width:44%;display:none">
+					<input type="submit" id="submit_reg" value="Εγγραφή">
 					<select id="select_b" name="select_b" style="width:44%;display:none;" onChange="changeSelect();">
 						<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
 						<?php
@@ -157,7 +160,6 @@
 							$mpla = get_business();
 						?>
 					</select>
-				<input type="submit" id="submit_reg" value="Εγγραφή">
 
 				</form>
 		</div>
