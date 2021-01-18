@@ -10,8 +10,8 @@ head{
     max-height: 30%;
 }
 
-body{
-    width: 100%;
+html, body{
+    max-width: 100%;
     margin: 0;
     /* height: %; */
     padding: 0;
@@ -120,10 +120,6 @@ ol il{
     right:50px;
 }
 
-.myh2 p{
-    /* color: blue; */
-    /* color: white; */
-}
 
 a:link, a:visited, a:active{
     /* color: blue; */
@@ -143,3 +139,4 @@ a:hover {
     display: table;
     width: 100%;
     /* position: relative; */
+}

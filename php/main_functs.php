@@ -1,10 +1,5 @@
 <!Doctype>
 <?php
-    // echo"geia";
-
-    // get_buisness();
-
-    // echo"telos";
     function get_business() {
         $servername = "127.0.0.1";
         $username = "root";
@@ -34,11 +29,6 @@
             array_push($b_names, "Καμία Επιχείρηση Διαθέσιμη");
             echo "<option value=''>Καμία Επιχείρηση Διαθέσιμη</option>";
         }
-       
-
-        // foreach($b_names as $b_name){
-        //     echo $b_name;
-        // }
 
         $conn->close();
         return $b_names;
@@ -74,11 +64,14 @@
             echo "<option value=''>Καμία Επιχείρηση Διαθέσιμη</option>";
         }
        
-
-        // foreach($b_names as $b_name){
-        //     echo $b_name;
-        // }
-
         $conn->close();
     }
+
+    function prep_input($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
 ?>

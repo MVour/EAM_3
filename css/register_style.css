@@ -5,11 +5,13 @@
     /* position: absolute; */
     /* padding: 50%; */
     color: white;
+    margin-top: 3%;
+    margin-left: 3%;
     opacity: 0.9;
     align-content: center;
     justify-content: center;
     cursor:pointer;
-    background-color: pink;
+    /* background-color: pink; */
     /* vertical-align: middle; */
     text-align: center;
 }
@@ -32,7 +34,7 @@
 	background-color: white;
     /* grid-template-areas: 'left mid1 mid2 right'; */
     position: absolute;
-    display: block;
+    display: none;
     border: 1px groove lightgrey;
     border-radius: 10px;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -65,11 +67,6 @@
     padding-left: 5%;
     /* display: flex; */
 
-}
-
-
-.register_popup > div{
-    /* background-color: pink; */
 }
 
 

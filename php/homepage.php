@@ -142,9 +142,9 @@
 		<!-- START COVID OVERL MENU START-->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="#">Ενδεδειγμένες Ενέργειες</a>
-			<a href="#">Επιχείρηση και </a>
-			<a href="#">Κρούσμα στον Εργασιακό Χώρο</a>
+			<a href="covid_news.php?article=0">Ενδεδειγμένες Ενέργειες</a>
+			<a href="covid_news.php?article=1">Επιχείρηση και </a>
+			<a href="covid_news.php?article=2">Κρούσμα στον Εργασιακό Χώρο</a>
 		</div>
 
 		<div id="main">
