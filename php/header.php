@@ -63,7 +63,7 @@
 				document.getElementById('err_mssg').innerHTML = '';
 				document.getElementById('submit_reg').disabled = "False";
 			}
-			else {	
+			else {
 				document.getElementById('err_mssg').style.color = 'red';
 				document.getElementById('psswrd').style.border = 'none';
 				document.getElementById('psswrd_confirm').style.border = 'none';
@@ -122,66 +122,6 @@
 		</div>
 	</head>
 
-    <div class="register" id="reg">
-        </div>
-        <div class="register_popup" id="myRegister">
-            <form action="./header.html" id="register_form" class="register_container">
-				<div class="alone">
-					<h1><b>Εγγραφή</b></h1>
-				</div>
-				<div class="alone">
-					<h6>Εύκολα και γρήγορα!</h6>
-				</div>
-					<div class="x_button">
-						<img role="button" src="../include/images/x_button.png" onclick="closeForm()">
-					</div>
-
-					<div class="together">
-						<input type="text" placeholder="Επώνυμο" name="l_name" required style="width:44%;">
-						<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
-					</div>
-					<div class="alone">
-						<input type="text" placeholder="E-mail" name="email" required>
-					</div>
-					<div class="alone">
-						<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Αριθμός Κινητού"required>
-					</div>
-					<div class="together">
-						<input type="text" placeholder="Κωδικός" name="psswrd" required style="width:44%;">
-						<input type="text" placeholder="Επιβεβαίωση Κωδικού" name="" required style="width:44%;">
-					</div>
-					<div class="together">
-						<select id="user_type" name="user_type" style="width:90%;color:gray" onclick="changeSelect()">
-							<option value="" hidden style="display:none">Κατηγορία Χρήστη</option>
-							<option value="1">Εργοδότης</option>
-							<option value="2">Εργαζόμενος</option>
-							<option value="3">'Ανεργος</option>
-						</select>
-						<div class="together" style="border:2px solid red;">
-							<select id="user_type" name="user_type" style="width:44%;color:gray" onclick="changeSelect();check_UserType();">
-								<option value="" hidden style="display:none">Κατηγορία Χρήστη</option>
-								<option value="1">Εργοδότης</option>
-								<option value="2">Εργαζόμενος</option>
-								<option value="3">'Ανεργος</option>
-							</select>
-							<input type="text" placeholder="Δήλωση Επιχείρησης" id="add_b" name="add_b" class="add_business" style="width:44%;">
-							<select id="select_b" name="select_b" class="select_business;" style="width:44%;" onChange="changeSelect();">
-								<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
-								<?php
-									include("../php/main_functs.php");
-									get_business();
-								?>
-								<option value="1">#1</option>
-							</select>
-						</div>
-					</div>
-				<div class="alone">
-					<p>EGGRAFH</p>
-					<input type="submit" value="Εγγραφή" style="height:60%; text-align:center;">
-				</div>
-            </form>
-        </div>
-=======
 	<div class="register" id="reg"></div>
     <div class="register_popup" id="myRegister">
 		<div class="x_button">

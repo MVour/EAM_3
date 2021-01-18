@@ -131,11 +131,9 @@
 				}
 
 		</script>
-
+	</head>	
 		<div class="sticky" id="header"></div>
-	</head>
-
-	<body>
+		<body>
 
 		<!-- i dont even know what that was..... -->
 		<!-- <div id="includedContent"></div> -->

@@ -17,6 +17,28 @@
 			$("#footer").load("footer.php");
 		});
 		</script>
+		<script>
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKt_U1WSLjl-0ICLCB_GjEVHuWaR3rxY&callback=initMap">
+</script>
+
+		<!-- <script type="text/javascript">
+		// Initialize and add the map
+function initMap() {
+// The location of Uluru
+const uluru = { lat: -25.344, lng: 131.036 };
+// The map, centered at Uluru
+const map = new google.maps.Map(document.getElementById("googleMap"), {
+zoom: 4,
+center: uluru,
+});
+// The marker, positioned at Uluru
+const marker = new google.maps.Marker({
+position: uluru,
+map: map,
+});
+}
+		</script> -->
+
 		<script type="text/javascript">
 
 			var curLat = null; //user location
@@ -87,14 +109,22 @@
 
 	<h3>My Google Maps Demo</h3>
 
-	<div id="map" style="height: 40%; width: 100%;">
-	    </div>
-		<script defer
-		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKt_U1WSLjl-0ICLCB_GjEVHuWaR3rxY&callback=initMap">
+	<div class="mapcontainer">
+		<div id="map" style="height: 40%; width: 100%;">
+		</div>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9etM9rqnYas63ypURAkvEFn_W_sU0NM4&callback=initMap">
 		</script>
+	</div>
 
-	</body>
 
+	<!-- link to e contact form -->
+	<div class="EContactTableContainer">
+		<p>Γιά άμεση επικοινωνία ή σε περίπτωση που δεν γνωρίζεται σε ποιό τμήμα να απευθυνθείτε συμπληρώστε την</p>
+		<a href="#">ηλεκτρονική φόρμα επικοινωνίας</a>
+	</div>
+
+</body>
 </html>
 
 </contact>

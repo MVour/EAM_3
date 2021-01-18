@@ -30,7 +30,7 @@ body{
     position: relative;
     max-height: 30%;
     /* border-image: linear-gradient(to right, whitesmoke, rgb(107, 145, 214)); */
-    
+
     border-bottom: 2px solid rgb(105, 157, 161);
 }
 
@@ -136,8 +136,3 @@ a:hover {
     display: table;
     width: 100%;
     /* position: relative; */
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> e416733903a07a8019551e2d8275d8160a635d51
