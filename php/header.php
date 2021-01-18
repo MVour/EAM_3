@@ -99,14 +99,14 @@
             </div>
 
 			<div class="login-container">
-				<div class="language-container" style="border:2px solid red;">
+				<div class="language-container">
 					<p style="word-spacing:10%;">
 						<a href="#">ΕΛ</a>
 						<p> || </p>
 						<a href="#">ENG</a>
 					</p>
 				</div>
-				<div class="log_in" style="border:2px solid red;">
+				<div class="log_in" >
 					<div class="login_form_container" >
 						<form action="../php/login.php" method="post" autocomplete="on">
 							<input type="text" name="name" placeholder="Όνομα Χρήστη" required>

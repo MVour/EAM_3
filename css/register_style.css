@@ -5,11 +5,13 @@
     /* position: absolute; */
     /* padding: 50%; */
     color: white;
+    margin-top: 3%;
+    margin-left: 3%;
     opacity: 0.9;
     align-content: center;
     justify-content: center;
     cursor:pointer;
-    background-color: pink;
+    /* background-color: pink; */
     /* vertical-align: middle; */
     text-align: center;
 }
@@ -65,11 +67,6 @@
     padding-left: 5%;
     /* display: flex; */
 
-}
-
-
-.register_popup > div{
-    /* background-color: pink; */
 }
 
 
