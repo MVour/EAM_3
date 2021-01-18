@@ -17,112 +17,126 @@
 			$("#footer").load("footer.php");
 		});
 		</script>
-		<script>
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKt_U1WSLjl-0ICLCB_GjEVHuWaR3rxY&callback=initMap">
-</script>
-
-		<!-- <script type="text/javascript">
-		// Initialize and add the map
-function initMap() {
-// The location of Uluru
-const uluru = { lat: -25.344, lng: 131.036 };
-// The map, centered at Uluru
-const map = new google.maps.Map(document.getElementById("googleMap"), {
-zoom: 4,
-center: uluru,
-});
-// The marker, positioned at Uluru
-const marker = new google.maps.Marker({
-position: uluru,
-map: map,
-});
-}
-		</script> -->
-
-		<script type="text/javascript">
-
-			var curLat = null; //user location
-			var curLon = null;
-
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-				} else {
-					window.alert("no location");
-				}
-			}
-			function showPosition(position) {
-				curLat = position.coords.latitude;
-				curLon = position.coords.longitude;
-			}
-			function initMap(){
-				getLocation() //finds out user location to fomat the map
-				if (curLat == null){
-					curLat = 42.3601;   //if the user location cannot be found, set default ones
-					curLon = -71.0589;   // of boston
-					console.log("random locations");
-				}
-				var options = {
-					zoom:10,
-					center:{lat:curLat, lng:curLon}
-				}
-				var map = new google.maps.Map(document.getElementById("map"),options);
-			}
-		</script>
-
-
 
 		<title>Επικοινωνία</title>
-		<div class="sticky" id="header"></div>
+		<div id="header"></div>
 	</head>
 
 	<body>
 
-		<!-- <div class="TitleRow"> -->
-			<div class="PageTitle">
-				<p>Επικοινωνία</p>
-			</div>
-		<!-- </div> -->
-
-		<div class="InfoTableContainer">
-			<div class="InfoTitle">
-				<p>Κεντρικές Υπηρεσίες</p>
-			</div>
-			<div class="InfoContent">
-				<div class="InfoRow">
-					<img class="InfoImg" src="addr_map.png">
-					<p>Διεύθυνση : Σταδίου 29, Αθήνα 105 59</p>
-				</div>
-				<div class="InfoRow">
-					<img class="InfoImg" src="clock.png">
-					<p>Ώρες : Τρίτη έως Πέμπτη όλο το 24ωρο</p>
-				</div>
-				<div class="InfoRow">
-					<img class="InfoImg" src="phone.png">
-					<p>Τηλέφωνο : Σταδίου κλπ</p>
-				</div>
-			</div>
+		<div class="PageTitle">
+			<p>Επικοινωνία</p>
 		</div>
+		<div class="UltimateContainer">
+
+			<div class="Col_1">
+
+				<div class="FisrtsContainer" id="InfoTableContainer">
+					<div class="InfoTitle">
+						<p>Κεντρικές Υπηρεσίες</p>
+					</div>
+					<div class="InfoContent">
+						<div class="InfoRow">
+							<img class="InfoImg" src="addr_map.png">
+							<p>Διεύθυνση : Σταδίου 29, Αθήνα 105 59</p>
+						</div>
+						<div class="InfoRow">
+							<img class="InfoImg" src="clock.png">
+							<p>Ώρες : Τρίτη έως Πέμπτη όλο το 24ωρο</p>
+						</div>
+						<div class="InfoRow">
+							<img class="InfoImg" src="phone.png">
+							<p>Τηλέφωνο : Σταδίου κλπ</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- MAP -->
+				<div class="mapcontainer">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12579.43641904405!2d23.7310797!3d37.9804173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6db1fc0cbb58a00a!2zzqXPgM6_z4XPgc6zzrXOr86_IM6Vz4HOs86xz4POr86xz4IgzrrOsc65IM6azr_Ouc69z4nOvc65zrrPjs69IM6lz4DOv864zq3Pg861z4nOvQ!5e0!3m2!1sel!2sgr!4v1610972979436!5m2!1sel!2sgr"
+						width=100%
+						height=100%
+						frameborder="0"
+						style="border:0;"
+						allowfullscreen=""
+						aria-hidden="false"
+						tabindex="0">
+					</iframe>
+				</div>
+
+				<!-- link to e contact form -->
+				<div class="EContactTableContainer">
+					<p>Γιά άμεση επικοινωνία ή σε περίπτωση που δεν γνωρίζεται σε ποιό τμήμα να απευθυνθείτε συμπληρώστε την
+					<a href="#">ηλεκτρονική φόρμα επικοινωνίας</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="Col_2">
+				<div class="FisrtsContainer" id="TelBlock">
+					<div class="TelBlocknum">
+						<span>1135</span>
+					</div>
+					<div class="TelBlocktxt">
+						<span>Η τηλεφωνική γραμμή του Εθνικού Οργανισμού Δημόσιας Υγεάς (ΕΟΔΥ) παρέχει πληροφορίες σχετικά με τον νέο κορωνοϊό όλο το 24ωρο</span>
+					</div>
+				</div>
+				<div class="FisrtsContainer">
+					<div class="lbutt lightbutt">
+						<p>Nέα Ωράρια λόγω COVID-19</p>
+					</div>
+					<div class="lbutt bluebutt">
+						<p>Online Ραντεβού</p>
+					</div>
+				</div>
+
+				<div class="FisrtsContainer">
+					<div class="anotherTitle">
+						<p>Άλλα Τμήματα - Διευθύνσεις</p>
+					</div>
+				</div>
+				<div class="FisrtsContainer">
+					<select class="DepartmentMenu">
+						<option value="0" disabled selected>Επιλογή Τμήματος</option>
+						<option value="1">COVID-19</option>
+						<option value="2">e-Υπηρεσίες</option>
+						<option value="3">Προγράμματα και Δράσεις</option>
+						<option value="4">Δικαιολογητικά</option>
+						<option value="5">Νέα και Ενημέρωση</option>
+						<option value="6">Νομικά</option>
+						<option value="7">Συχνές Ερωτήσεις</option>
+					</select>
+				</div>
+
+				<div class="DepartmentTitle">
+					<p>Περιγραφή Τμήματος</p>
+				</div>
+
+				<div class="SecondContainer">
+					<div class="ThirdContainer" id="rightborder">
+						
+					</div>
+					<div class="ThirdContainer">
+						<div class="FisrtsContainer" id="DepInfo">
+							<img class="InfoImg" src="mail.png">
+						</div>
+						<div class="FisrtsContainer" id="DepInfo">
+							<img class="InfoImg" src="phone.png">
+						</div>
+						<div class="FisrtsContainer" id="DepInfo">
+							<img class="InfoImg" src="clock.png">
+						</div>
+					</div>
+
+				</div>
+
+			</div>
 
 
-	<!-- MAP -->
 
-	<h3>My Google Maps Demo</h3>
 
-	<div class="mapcontainer">
-		<div id="map" style="height: 40%; width: 100%;">
 		</div>
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9etM9rqnYas63ypURAkvEFn_W_sU0NM4&callback=initMap">
-		</script>
-	</div>
-
-
-	<!-- link to e contact form -->
-	<div class="EContactTableContainer">
-		<p>Γιά άμεση επικοινωνία ή σε περίπτωση που δεν γνωρίζεται σε ποιό τμήμα να απευθυνθείτε συμπληρώστε την</p>
-		<a href="#">ηλεκτρονική φόρμα επικοινωνίας</a>
-	</div>
 
 </body>
 </html>

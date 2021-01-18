@@ -131,7 +131,7 @@
 				}
 
 		</script>
-	</head>	
+	</head>
 
 		<div id="header"></div>
 		<body>
@@ -236,6 +236,7 @@
 				</div>
 		</div>
 
+		<!-- J+E SEARCH -->
 		<div class="JESearchRow">
 			<div class="JESearchContainer">
 				<p class="FSTitle">Αναζήτηση Θέσεων Εργασίας</p>

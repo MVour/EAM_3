@@ -12,7 +12,7 @@
 			// document.getElementById("body_1").style.opacity = "0.2";
 			document.getElementById("reg").style.display = "flex";
 			document.getElementById("myRegister").style.display = "block";
-			
+
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
 			document.documentElement.style.overflow = 'hidden';
@@ -152,6 +152,7 @@
 				</select>
 
 					<input type="text" placeholder="Δήλωση Επιχείρησης" id="add_b" name="add_b" style="width:44%;display:none">
+					<input type="submit" id="submit_reg" value="Εγγραφή">
 					<select id="select_b" name="select_b" style="width:44%;display:none;" onChange="changeSelect();">
 						<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
 						<?php
@@ -159,7 +160,6 @@
 							$mpla = get_business();
 						?>
 					</select>
-				<input type="submit" id="submit_reg" value="Εγγραφή">
 
 				</form>
 		</div>
