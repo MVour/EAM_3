@@ -18,6 +18,13 @@ body{
     /* padding: 0; */
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+
 .myheader{
     margin: 0;
     padding: 0;

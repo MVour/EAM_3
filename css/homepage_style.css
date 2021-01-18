@@ -162,6 +162,8 @@ html, body {
     justify-content: center;
     align-items: center;
 	/* background-color: papayawhip; */
+	border-bottom: thin solid silver;
+	padding-bottom: 3%;
 }
 
 .Personabutton:hover {
