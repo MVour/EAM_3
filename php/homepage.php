@@ -82,7 +82,7 @@
 
 	</script>
 
-	<div class="register" id="reg">		
+	<div class="register" id="reg">
 	</div>
 
 	<head>

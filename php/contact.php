@@ -17,23 +17,36 @@
 			$("#footer").load("footer.php");
 		});
 		</script>
-		<script>
-	      // Initialize and add the map
-	      function initMap() {
-	        // The location of Uluru
-	        const uluru = { lat: -25.344, lng: 131.036 };
-	        // The map, centered at Uluru
-	        const map = new google.maps.Map(document.getElementById("map"), {
-	          zoom: 4,
-	          center: uluru,
-	        });
-	        // The marker, positioned at Uluru
-	        const marker = new google.maps.Marker({
-	          position: uluru,
-	          map: map,
-	        });
-	      }
-	    </script>
+		<script type="text/javascript">
+
+			var curLat = null; //user location
+			var curLon = null;
+
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					window.alert("no location");
+				}
+			}
+			function showPosition(position) {
+				curLat = position.coords.latitude;
+				curLon = position.coords.longitude;
+			}
+			function initMap(){
+				getLocation() //finds out user location to fomat the map
+				if (curLat == null){
+					curLat = 42.3601;   //if the user location cannot be found, set default ones
+					curLon = -71.0589;   // of boston
+					console.log("random locations");
+				}
+				var options = {
+					zoom:10,
+					center:{lat:curLat, lng:curLon}
+				}
+				var map = new google.maps.Map(document.getElementById("map"),options);
+			}
+		</script>
 
 
 
@@ -73,9 +86,12 @@
 	<!-- MAP -->
 
 	<h3>My Google Maps Demo</h3>
-	<!--The div element for the map -->
-	<div id="map"></div>
 
+	<div id="map" style="height: 40%; width: 100%;">
+	    </div>
+		<script defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKt_U1WSLjl-0ICLCB_GjEVHuWaR3rxY&callback=initMap">
+		</script>
 
 	</body>
 
