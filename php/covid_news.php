@@ -60,6 +60,9 @@
     <div id="header"></div>
     
     <body style="">
+        <div class="title">
+            Νέα & Ενημερώσεις σχετικές με τον COVID-19
+        </div>
         <div class="all_container">
             <div class="news_list_container">
                 <div role="button" class="news_container" id="0" onclick="showArticle('0')">
@@ -84,22 +87,22 @@
 
             <div class="news_expanded_container" id="content">
                 <div class="news_article" id="news_0" name="news_0">
-                       Article CONTENT #0
+                    Article CONTENT #0
                 </div>
                 <div class="news_article" id="news_1" name="news_1">
-                       Article CONTENT #1
+                    Article CONTENT #1
                 </div>
                 <div class="news_article" id="news_2" name="news_2">
-                       Article CONTENT #2
+                    Article CONTENT #2
                 </div>
                 <div class="news_article" id="news_3" name="news_3">
-                       Article CONTENT #3
+                    Article CONTENT #3
                 </div>
                 <div class="news_article" id="news_4" name="news_4">
-                       Article CONTENT #4
+                    Article CONTENT #4
                 </div>
                 <div class="news_article" id="news_5" name="news_5">
-                       Article CONTENT #5
+                    Article CONTENT #5
                 </div>
             </div>
         </div>
@@ -109,7 +112,7 @@
         if(isset($_GET['article'])){
             include("../php/main_functs.php");
             $id = prep_input(intval($_GET['article']));
-            echo $id;
+            // echo $id;
             echo "<script>showArticle(", $id,");</script>";
         }
     ?>

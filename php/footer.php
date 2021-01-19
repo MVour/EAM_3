@@ -13,9 +13,9 @@
                 </div>
                 <div class="content_container" style="">
                     <ul>
-                        <li><a href='#'>Ιστορική Εξέλιξη</a></li>
-                        <li><a href='#'>Έργο</a></li>
-                        <li><a href='#'>Οργανόγραμμα</a></li>
+                        <li><a href='../html/under_construction.html'>Ιστορική Εξέλιξη</a></li>
+                        <li><a href='../html/under_construction.html'>Έργο</a></li>
+                        <li><a href='../html/under_construction.html'>Οργανόγραμμα</a></li>
                     </ul>
                 </div>
             </div>
