@@ -1,8 +1,6 @@
 <?php
     session_start();
 ?>
-
-
     <!DOCTYPE html>
 <html>
 
@@ -82,46 +80,119 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
     <head>
 		<div class="sticky">
-        <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
-        <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
-        <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+	        <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
+	        <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
+			<link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+			<link rel="stylesheet" type="text/css" href="../css/navigationbar.css?v=1.1">
 
-    	<!-- <body id="body_1"> -->
-        <div class="myheader">
-			<div class="logoimgtxtcontainer">
-                <div class="myhLogo">
-                    <a href= "../php/hello.php">
-                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
-						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
-                    </a>
-                </div>
-                <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
-            </div>
 
-			<div class="login-container">
-				<div class="language-container">
-					<p style="word-spacing:10%;">
-						<a href="#">ΕΛ</a>
-						<p> || </p>
-						<a href="#">ENG</a>
-					</p>
-				</div>
-				<div class="log_in" >
-					<div class="login_form_container" >
-						<form action="../php/login.php" method="post" autocomplete="on">
-							<input type="text" name="name" placeholder="Όνομα Χρήστη" required>
-							<input type="password" name="pswrd" placeholder="Κώδικός" required>
-							<div class="login_submit_container">
-								<input type="submit" style="" value="Είσοδος">
+	    	<!-- <body id="body_1"> -->
+	        <div class="myheader">
+				<div class="logoimgtxtcontainer">
+	                <div class="myhLogo">
+	                    <a href= "../php/hello.php">
+	                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
+							<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
+	                    </a>
+	                </div>
+	                <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
+	            </div>
 
-							<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
-							</div>
-						</form>
+				<div class="login-container">
+					<div class="language-container">
+						<p style="word-spacing:10%;">
+							<a href="#">ΕΛ</a>
+							<p> || </p>
+							<a href="#">ENG</a>
+						</p>
+					</div>
+					<div class="log_in" >
+						<div class="login_form_container" >
+							<form action="../php/login.php" method="post" autocomplete="on">
+								<input type="text" name="name" placeholder="Όνομα Χρήστη" required>
+								<input type="password" name="pswrd" placeholder="Κώδικός" required>
+								<div class="login_submit_container">
+									<input type="submit" style="" value="Είσοδος">
+
+								<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div class="topnav">
+			  <a class="active" href="../php/homepage.php">Home</a>
+			  <div class="dropdown">
+			    <button class="dropbtn">Εργαζόμενος
+			      <i class="fa fa-caret-down"></i>
+			    </button>
+				<!-- <div class="dropdown-cont-container"> -->
+					<div class="dropdown-content">
+						<a href="../php/covid_news.php">Covid-19</a>
+						<a href="#">Εργασιακά</a>
+						<a href="#">Προγράμματα</a>
+						<a href="#">Νέα και Ενημερώσεις</a>
+						<a href="#">Νομικά</a>
+						<a href="#">Στατιστικά</a>
+						<a href="">e-Υπηρεσίες</a>
+						<a href="#">Συχνές Ερωτήσεις</a>
+					</div>
+				<!-- </div> -->
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Εργοδότης
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <!-- <div class="dropdown-cont-container"> -->
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  <!-- </div> -->
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Άνεργος
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-cont-container">
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  </div>
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Συνταξιούχος
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-cont-container">
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  </div>
+			</div>
+			</div>
 		</div>
-	</div>
 	</head>
 
 	<div class="register" id="reg"></div>
@@ -160,7 +231,6 @@
 							$mpla = get_business();
 						?>
 					</select>
-
 				</form>
 		</div>
 	</div>

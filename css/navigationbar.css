@@ -1,0 +1,88 @@
+.topnav {
+	height: 20%;
+  	overflow: hidden;
+  	background-color: whitesmoke;
+}
+
+.topnav a {
+	padding: 1%;
+	height: 100%;
+	float: left;
+	color: CadetBlue;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	color: grey;
+  	background-color: lightblue;
+ 	color: black;
+}
+
+.topnav a.active {
+  	background-color: CadetBlue;
+  	color: white;
+}
+
+.topnav .dropdown {
+	/* height: 100%; */
+	padding: 1%;
+	float: left;
+	overflow: hidden;
+}
+
+.topnav .dropdown .dropbtn {
+	width: 100%;
+	height: auto;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 1%;
+	/* padding: 1%; */
+	height: 100%;
+	float: left;
+	color: CadetBlue;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: powderblue;
+}
+
+.dropdown-content {
+	display: none;
+	margin-top: 2%;
+	columns: 2;
+	position: absolute;
+	background-color: whitesmoke;
+	width: 100%;
+	left: 0;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	margin: auto;
+	min-width: 30%;
+	column-width: auto;
+	/* width:(100/x)%; */
+	/* width: auto; */
+  float: none;
+  color: grey;
+  padding: 1%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: lightblue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: table-column-group;
+}

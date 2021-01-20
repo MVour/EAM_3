@@ -8,11 +8,11 @@ head{
     margin: 0;
     padding: 0;
     max-height: 30%;
-	
+
 }
 
 html, body{
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     /* height: %; */
     padding: 0;

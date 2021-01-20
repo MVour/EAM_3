@@ -133,8 +133,8 @@
 		</script>
 	</head>
 
-		<div id="header"></div>
 		<body>
+			<div id="header"></div>
 
 		<!-- i dont even know what that was..... -->
 		<!-- <div id="includedContent"></div> -->
@@ -142,9 +142,35 @@
 		<!-- START COVID OVERL MENU START-->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="covid_news.php?article=0">Ενδεδειγμένες Ενέργειες</a>
-			<a href="covid_news.php?article=1">Επιχείρηση και </a>
-			<a href="covid_news.php?article=2">Κρούσμα στον Εργασιακό Χώρο</a>
+			<div class="categories">
+				<p>Εργαζόμενοι</p>
+			</div>
+
+			<div class="Cdropdown">
+				<div class="categories">
+					<p>Εργοδότες</p>
+				</div>
+				<div class="Cdropdown-content" >
+					<a href="../php/covid_news.php">Βασικές Οδηγίες</a><br>
+					<a href="covid_news.php?article=0">Οργανωτικά Μέτρα</a><br>
+					<a href="covid_news.php?article=1">Μέτρα ατομικής υγιεινής και προσωπικής προαστασίας</a><br>
+					<a href="covid_news.php?article=2">Περιβαλλοντικά μέτρα</a><br>
+					<a href="covid_news.php?article=2">Γενικές Οδηγίες για καθαρισμό χώρου</a><br>
+				</div>
+			</div>
+
+			<div class="Cdropdown">
+				<div class="categories">
+					<p>Κρούσμα στον Εργασιακό Χώρο</p>
+				</div>
+				<div class="Cdropdown-content">
+					<a href="../php/covid_news.php">Covid-19</a>
+					<a href="covid_news.php?article=0">Ενδεδειγμένες Ενέργειες</a>
+					<a href="covid_news.php?article=1">Επιχείρηση και Covid</a>
+					<a href="covid_news.php?article=2">Κρούσμα στον Εργασιακό Χώρο</a>
+				</div>
+			</div>
+
 		</div>
 
 		<div id="main">
