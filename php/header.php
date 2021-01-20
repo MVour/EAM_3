@@ -1,3 +1,4 @@
+
 <?php if(!session_id()) session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +73,7 @@
 
 		function log_in_display(){
 			document.getElementById('log_in').style.display = 'none';
-			document.getElementById('log_out').style.display = 'block';				
+			document.getElementById('log_out').style.display = 'block';
 		}
 
 		function log_out_display(){
@@ -108,7 +109,8 @@
 		<div class="sticky">
         <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
-        <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+		<link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+		<link rel="stylesheet" type="text/css" href="../css/navigationbar.css?v=1.1">
 
     	<!-- <body id="body_1"> -->
         <div class="myheader">
@@ -155,15 +157,85 @@
 								?>
 							</select>
 							<form action="" style="margin:0;padding:0;height:100%;" method="post">
-								<input type="submit" style="height:100%;width=100%;background-color:transparent;border:none;border-left:2px solid grey;margin-left:2%;" id="out" name="logout_button" onclick="" value="Έξοδος">							
-							
+								<input type="submit" style="height:100%;width=100%;background-color:transparent;border:none;border-left:2px solid grey;margin-left:2%;" id="out" name="logout_button" onclick="" value="Έξοδος">
+
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="topnav">
+			  <a class="active" href="../php/homepage.php">Home</a>
+			  <div class="dropdown">
+			    <button class="dropbtn">Εργαζόμενος
+			      <i class="fa fa-caret-down"></i>
+			    </button>
+				<!-- <div class="dropdown-cont-container"> -->
+					<div class="dropdown-content">
+						<a href="../php/covid_news.php">Covid-19</a>
+						<a href="#">Εργασιακά</a>
+						<a href="#">Προγράμματα</a>
+						<a href="#">Νέα και Ενημερώσεις</a>
+						<a href="#">Νομικά</a>
+						<a href="#">Στατιστικά</a>
+						<a href="">e-Υπηρεσίες</a>
+						<a href="#">Συχνές Ερωτήσεις</a>
+					</div>
+				<!-- </div> -->
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Εργοδότης
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <!-- <div class="dropdown-cont-container"> -->
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  <!-- </div> -->
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Άνεργος
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-cont-container">
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  </div>
+			</div>
+			<div class="dropdown">
+			  <button class="dropbtn">Συνταξιούχος
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-cont-container">
+				  <div class="dropdown-content">
+					  <a href="../php/covid_news.php">Covid-19</a>
+					  <a href="#">Εργασιακά</a>
+					  <a href="#">Προγράμματα</a>
+					  <a href="#">Νέα και Ενημερώσεις</a>
+					  <a href="#">Νομικά</a>
+					  <a href="#">Στατιστικά</a>
+					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="#">Συχνές Ερωτήσεις</a>
+				  </div>
+			  </div>
+			</div>
+			</div>
 		</div>
-	</div>
 	</head>
 
 	<div class="register" id="reg"></div>

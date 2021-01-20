@@ -1,7 +1,7 @@
 
 <contact>
 <!DOCTYPE html>
-<html lang="gr" dir="ltr">
+<html lang="el" dir="ltr">
 	<head>
 		<meta charset="utf-8">
 		<!-- <link rel= "stylesheet" href="../css/homepage_style.css?v=1.1"> -->
@@ -15,7 +15,7 @@
 		<script>
 		$(function(){
 			$("#header").load("header.php");
-			$("#footer").load("footer.php");
+			// $("#footer").load("footer.php");
 		});
 		</script>
 
@@ -51,7 +51,7 @@
 						</div>
 						<div class="InfoRow">
 							<img class="InfoImg" src="phone.png">
-							<p>Τηλέφωνο : Σταδίου κλπ</p>
+							<p>Τηλέφωνο : 213-1516649 - 213-1516651</p>
 						</div>
 					</div>
 				</div>
@@ -104,13 +104,13 @@
 				<div class="FisrtsContainer">
 					<select class="DepartmentMenu">
 						<option value="0" disabled selected>Επιλογή Τμήματος</option>
-						<option value="1">COVID-19</option>
-						<option value="2">e-Υπηρεσίες</option>
-						<option value="3">Προγράμματα και Δράσεις</option>
-						<option value="4">Δικαιολογητικά</option>
-						<option value="5">Νέα και Ενημέρωση</option>
-						<option value="6">Νομικά</option>
-						<option value="7">Συχνές Ερωτήσεις</option>
+						<option value="1">Ι.Κ.Α.</option>
+						<option value="2">Ο.Α.Ε.Δ.</option>
+						<option value="3">ΙΡΙΔΑ</option>
+						<option value="4">ΤΜΗΜΑ ΚΟΙΝΟΒΟΥΛΕΥΤΙΚΟΥ ΕΛΕΓΧΟΥ</option>
+						<option value="5">ΤΜΗΜΑ ΝΟΜΟΘΕΤΙΚΗΣ ΠΡΩΤΟΒΟΥΛΙΑΣ</option>
+						<option value="6">ΤΜΗΜΑ ΕΣΩΤΕΡΙΚΟΥ ΕΛΕΓΧΟΥ</option>
+						<option value="7">ΤΜΗΜΑ ΠΟΛΙΤΙΚΗΣ ΣΧΕΔΙΑΣΗΣ ΕΚΤΑΚΤΗΣ ΑΝΑΓΚΗΣ (Π.Σ.Ε.Α.)</option>
 					</select>
 				</div>
 
@@ -120,7 +120,7 @@
 
 				<div class="SecondContainer">
 					<div class="ThirdContainer" id="rightborder">
-						NO INFO
+
 					</div>
 					<div class="ThirdContainer">
 						<div class="FisrtsContainer" id="DepInfo">
