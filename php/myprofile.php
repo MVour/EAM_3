@@ -96,7 +96,7 @@
                 <div role="button" class="news_container" id="2" onclick="showArticle('2')">
                     <p role="button" >Η Εργασία μου</p>
                 </div>
-                <div role="button" class="news_container" id="2" onclick="location = 'homepage.php'">
+                <div role="button" class="news_container" id="2" onclick="location = 'e-services.php'">
                     <p role="button" >Διαθέσιμες e-Υπηρεσίες</p>
                 </div>
             </div>

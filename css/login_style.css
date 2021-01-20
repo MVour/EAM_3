@@ -106,7 +106,7 @@
     display: flex;
     min-height: 3%;
     min-width: 7%;
-    width: auto;
+    max-width: 15%;
     color: rgba(128, 128, 128, 0.89);
     margin-top: 2%;
     /* border: 2px solid red; */
@@ -114,11 +114,6 @@
   }
 
   
-
-
-  select-selected{
-    background-color: yellow;
-  }
 
   .profile_actions select{
     background-color: transparent;

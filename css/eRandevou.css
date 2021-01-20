@@ -1,19 +1,12 @@
-html {
-	height: auto;
-	width: 100%;
-}
 head {
-	margin: auto;
-	padding: 8%;
-	width: auto;
-
+	margin:0;
+	padding:0;
 }
-body {
-	margin: auto;
-	width: 100%;
-	height: auto;
-	width: 100;
-	/* padding: 8%; */
+html, body{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    max-height: auto;
 }
 
 .subtitlerow {
@@ -47,7 +40,7 @@ form fieldset {
 	margin-right: 10%;
 	margin-top: 5%;
 	margin-bottom: 5%;
-	height auto;
+	height: auto;
 	/* background-color: pink; */
 	display: flex;
 }
@@ -83,7 +76,7 @@ form fieldset .FisrtsContainer {
 
 /* APPOINTMENT info */
 
-.form_container input[type=text], select {
+.form_container input[type=text], .FisrtsContainer select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

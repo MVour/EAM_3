@@ -75,6 +75,7 @@ html, body{
     flex: 75%;
     max-height: 500px;
     /* max-height: 60%; */
+    width: 100%;
     padding: 2%;
 }
 
@@ -86,7 +87,7 @@ html, body{
     margin-right: auto;
     max-height: 100%;
     /* overflow: auto; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .news_article .mytitle{
@@ -129,3 +130,58 @@ html, body{
     width: 10%;
     margin: 2%;
 }
+
+
+.news_article .sub_menu_con{
+    display:block;
+    width: 100%;
+    height: 15%;
+    /* border: 2px solid red; */
+}
+
+.news_article .sub_menu{
+    display:inline-block;
+    margin-top:2%;
+    margin:0;
+    width: 49%;
+    height: auto;
+    min-height: 7%;
+    padding-top: 1%;
+    text-align: center;
+}
+
+.news_article .sub_menu:hover{
+    border:2px solid black;
+    background-color: cadetblue;
+}
+
+.news_article .sub_content{
+    display: block;
+    height: 85%;
+    width: 100%;
+    text-align:  center;
+}
+
+.news_article .sub_content select{
+    width: auto;
+    padding: 3%;
+    height: 30%;
+    margin-top: 7%;
+    background-color: lightblue;
+    border-radius: 50px;
+    font-size: 150%;
+    text-align: center;
+    justify-content: center;
+}
+
+.news_article .sub_content select:after{
+    border:none;
+}
+
+
+.news_article .sub_content select:hover{
+    background-color: cadet;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+

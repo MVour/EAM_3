@@ -1,12 +1,5 @@
 <yphresies>
 <!DOCTYPE html>
-<?php
-if(isset($_GET["sub_button"]))
-{
-echo "Success";
-}
-
-?>
 
 <html lang="el" dir="ltr">
 	<head>
@@ -23,7 +16,7 @@ echo "Success";
 		<script>
 		$(function(){
 			$("#header").load("header.php");
-			// $("#footer").load("footer.php");
+			$("#footer").load("footer.php");
 		});
 		</script>
 
@@ -113,10 +106,14 @@ echo "Success";
 			$('input.timepicker').timepicker({});
 			});
 		</script>
-
-		</header> -->
-		<div id="header"></div>
+		<?php
+			include("../php/main_functs.php");
+			checkall();
+		?>
 	</head>
+	<div id="header"></div>
+	
+
 
 	<body>
 		<div class="PageTitle">
@@ -260,5 +257,6 @@ echo "Success";
 		<!-- time picker -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 	</body>
+	<div id="footer"></div>
 </html>
 </yphresies>
