@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<?php
-    session_start();
-?>
-    <!DOCTYPE html>
-=======
+
 <?php if(!session_id()) session_start(); ?>
 <!DOCTYPE html>
->>>>>>> 67837c4abcb5d3da07204998e01a797affe717be
 <html>
 
 	<meta charset="UTF-8">
@@ -115,7 +109,8 @@
 		<div class="sticky">
         <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
         <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
-        <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+		<link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
+		<link rel="stylesheet" type="text/css" href="../css/navigationbar.css?v=1.1">
 
     	<!-- <body id="body_1"> -->
         <div class="myheader">

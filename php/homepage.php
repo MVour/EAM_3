@@ -147,8 +147,17 @@
 		<!-- START COVID OVERL MENU START-->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<div class="categories">
-				<p>Εργαζόμενοι</p>
+
+			<div class="Cdropdown">
+				<div class="categories">
+					<p>Εργαζόμενοι</p>
+				</div>
+				<div class="Cdropdown-content" >
+					<a href="covid_news.php?article=6">Ατομική Υγιεινή</a><br>
+					<a href="covid_news.php?article=7">Ενέργειες σε περίπτωση κρούσματος</a><br>
+					<a href="covid_news.php?article=8">Οδηγίες απομώνωσης</a><br>
+					<a href="covid_news.php?article=9">Ευπαθείες Ομάδες</a><br>
+				</div>
 			</div>
 
 			<div class="Cdropdown">
@@ -156,11 +165,10 @@
 					<p>Εργοδότες</p>
 				</div>
 				<div class="Cdropdown-content" >
-					<a href="../php/covid_news.php">Βασικές Οδηγίες</a><br>
-					<a href="covid_news.php?article=0">Οργανωτικά Μέτρα</a><br>
-					<a href="covid_news.php?article=1">Μέτρα ατομικής υγιεινής και προσωπικής προαστασίας</a><br>
-					<a href="covid_news.php?article=2">Περιβαλλοντικά μέτρα</a><br>
-					<a href="covid_news.php?article=2">Γενικές Οδηγίες για καθαρισμό χώρου</a><br>
+					<a href="covid_news.php?article=3">Βασικές Υποχρεώσεις και Οργάνωση</a><br>
+					<a href="covid_news.php?article=4">Οργανωτικά Μέτρα</a><br>
+					<a href="covid_news.php?article=5">Περιβαλλοντικά μέτρα</a><br>
+					<a href="covid_news.php?article=6">Μέτρα ατομικής υγιεινής και προσωπικής προαστασίας</a><br>
 				</div>
 			</div>
 
@@ -169,10 +177,8 @@
 					<p>Κρούσμα στον Εργασιακό Χώρο</p>
 				</div>
 				<div class="Cdropdown-content">
-					<a href="../php/covid_news.php">Covid-19</a>
 					<a href="covid_news.php?article=0">Ενδεδειγμένες Ενέργειες</a>
 					<a href="covid_news.php?article=1">Επιχείρηση και Covid</a>
-					<a href="covid_news.php?article=2">Κρούσμα στον Εργασιακό Χώρο</a>
 				</div>
 			</div>
 

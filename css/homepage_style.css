@@ -362,11 +362,9 @@ div.searchable {
 .SampleRow {
 	width: 100%;
 	/* height: 300px; */
-	height: auto;
+	height: 20%;
 	display: flex;
 	background-color: white;
-	/* margin-bottom: 20%; */
-	/* background-color: pink; */
 }
 
 .SimpleContainer {
@@ -568,9 +566,9 @@ div.searchable {
 	background-color: lightblue;
 }
 
-.Cdropdown:hover {
+/* .Cdropdown:hover {
 	margin-bottom: 50;
-}
+} */
 
 .Cdropdown:hover .Cdropdown-content {
   display: table-column;
