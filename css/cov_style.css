@@ -46,7 +46,7 @@ html, body{
 .news_container{
     display: flex;
     box-shadow: 10px 0px 3px -7px lightblue; 
-    height: auto;
+    /* height: auto; */
     min-height: 100px;
     max-width: 100%;
     padding: 4%;
@@ -73,10 +73,9 @@ html, body{
 
 .news_expanded_container{
     flex: 75%;
-    min-height: 500px;
-    height: auto;
+    max-height: 500px;
+    /* max-height: 60%; */
     padding: 2%;
-    align-self: strecth;
 }
 
 .news_article{
@@ -85,8 +84,26 @@ html, body{
     margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
-    /* padding: 2%; */
+    max-height: 100%;
+    /* overflow: auto; */
+    border: 2px solid black;
 }
+
+.news_article .mytitle{
+    font-size: 130%;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.news_article .mycontent{
+    word-spacing: 2%;
+    overflow: auto;
+    max-height: 100%;
+}
+
 
 .inner_con{
     width:100%;
@@ -98,7 +115,6 @@ html, body{
 
 .news_article form{
     font-size: 130%;
-
 }
 
 
