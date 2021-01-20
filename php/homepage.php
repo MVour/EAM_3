@@ -1,8 +1,7 @@
+<? if(!session_id()) session_start(); ?>
 <homepage>
 <html>
-
 	<meta charset="UTF-8">
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 		function filterFunction(that, event) {
 		    let container, input, filter, li, input_val;
@@ -80,7 +79,8 @@
 		    $(this).addClass("selected");
 		});
 
-	</script>
+
+		</script>
 
 	<div class="register" id="reg">
 	</div>
@@ -131,6 +131,11 @@
 				}
 
 		</script>
+
+	<?php
+		include("../php/main_functs.php");
+		checkall();
+	?>
 	</head>
 
 		<body>
@@ -177,7 +182,7 @@
 			<!-- <div class="covbuttcontainer"> -->
 				<div id="fixedbutton" class="covidbutton" onclick="openNav()">
 					<span>COVID-19</span>
-					<img src="covid_corona_icon_2.png" width="100%" height="100%">
+					<img src="covid_corona_icon_2.png" width="80%" height="80%"></img>
 				</div>
 			<!-- </div> -->
 		</div>
@@ -353,9 +358,7 @@
 
 	</body>
 
-
-
-
+	<div id="footer"></div>
 
 </html>
 

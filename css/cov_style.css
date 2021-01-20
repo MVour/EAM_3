@@ -13,36 +13,41 @@ html, body{
     /* background-color: rgba(95, 158, 160, 0.644); */
 }
 
+.title{
+    display: block;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    /* height: auto; */
+    border-bottom: 2px solid black;
+    font-size: 170%;
+}
 
 .all_container{
     display: flex;
-    /* align-content: center; */
-    /* position: relative; */
-    /* border: 2px solid red; */
-    margin-top: 10%;
+    margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
-    /* overflow: scroll; */
+    margin-bottom: 5%;
     width: 80%;
-    /* height: 20%; */
-    /* height: auto; */
-    /* justify-content: ; */
+    height: auto;
+    align-items: stretch;
     flex-wrap: wrap;
-    /* overflow-y: auto; */
 }
 
 .news_list_container{
     display: block;
     max-height: none;
-    /* max-width: 15%; */
     flex: 15%;
+    align-self: stretch;
 }
 
 .news_container{
     display: flex;
     box-shadow: 10px 0px 3px -7px lightblue; 
-    min-height: 20%;
+    /* height: auto; */
+    min-height: 100px;
     max-width: 100%;
     padding: 4%;
     align-items: center;
@@ -68,7 +73,8 @@ html, body{
 
 .news_expanded_container{
     flex: 75%;
-    min-height: 500px;
+    max-height: 500px;
+    /* max-height: 60%; */
     padding: 2%;
 }
 
@@ -78,6 +84,48 @@ html, body{
     margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid red;
-    /* padding: 2%; */
+    max-height: 100%;
+    /* overflow: auto; */
+    border: 2px solid black;
+}
+
+.news_article .mytitle{
+    font-size: 130%;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.news_article .mycontent{
+    word-spacing: 2%;
+    overflow: auto;
+    max-height: 100%;
+}
+
+
+.inner_con{
+    width:100%;
+    height: 100%;
+    border: 2px solid green;
+    display: block;
+}
+
+
+.news_article form{
+    font-size: 130%;
+}
+
+
+.news_article form label{
+    /* background-color: pink; */
+    text-decoration: underline;
+    margin: 2%;
+}
+
+
+.news_article form input{
+    width: 10%;
+    margin: 2%;
 }

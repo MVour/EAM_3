@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-
-Sup !!<br>
-
-name: <?php echo $_POST['name'];?><br>
-pss: <?php echo $_POST['pswrd'];?><br>
-
-
-</html>
-<div class="navbar">
-            <a href="javascript:history.back();"> Home Page </a>
-            <a href="javascript:window.location.reload();"> Log In </a>
-        </div>
+<!DOCTYPE>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo"Alert<br>";
-}
-?>
-
-<?php
-
+// if(!session_id()) session_start();
     function prep_input($data){
         $data = trim($data);
         $data = stripslashes($data);
@@ -28,17 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return $data;
     }
 
-    $name = prep_input($_POST['name']);
-    $pswrd = prep_input($_POST['pswrd']);
+    function log_in(){
 
-    echo "final name: ", $name, "<br>";
-    echo "final pssswrd: ", $pswrd, "<br>";
-    echo "md_5 pswrd: ", md5($pswrd), "<br>";
-
-?>
-
-    <?php
-
+        if(!session_id()) session_start();
         $servername = "127.0.0.1";
         $username = "root";
         $password = "patates";
@@ -49,22 +21,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(!$conn){
             die("Connection failed: " . mysqli_connect_error());
         }
-        echo "Connected successfully<br>";
+        // echo "Connected successfully<br>";
 
-        $query = $conn->prepare("SELECT count(*) FROM Users WHERE User_nm = ? and User_psswrd_MD5 = ?");
-        $query->bind_param("ss", $name, $pswrd);
+        $query = $conn->prepare("SELECT User_id FROM Users WHERE User_nm = ? and User_psswrd_MD5 = ?");
+        $query->bind_param("ss", $_POST['name'], $_POST['pswrd']);
         $query->execute();
         $result = $query->get_result();
         $row = $result->fetch_assoc();
-        // print_r ($row);
-        // echo "count: ", count($row), "<br>"; // works always cuz count(*) in select always returns value
-        // echo "val: ", $row['count(*)'], "<br>";
-        
-        if($row['count(*)'] == 1)
-            echo "USER LOGED<br>";
-        else
-            echo "INVALID USER<br>";
-
         $conn->close();
-    ?>
-</html>
+        if($result->num_rows != NULL){
+            if($row['User_id'] != NULL){
+                $_SESSION['LOGED'] = 1;
+                $_SESSION['secret'] = 1;
+                return $row['User_id'];
+            }
+            else{
+                $_SESSION['LOGED'] = 0;
+                return -1;
+            }
+        }
+        return -1;
+    }
+
+    // echo(log_in());
+?>

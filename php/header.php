@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 <?php
     session_start();
 ?>
     <!DOCTYPE html>
+=======
+<?php if(!session_id()) session_start(); ?>
+<!DOCTYPE html>
+>>>>>>> 67837c4abcb5d3da07204998e01a797affe717be
 <html>
 
 	<meta charset="UTF-8">
@@ -59,7 +64,7 @@
 				document.getElementById('psswrd').style.border = '2px solid green';
 				document.getElementById('err_mssg').style.color = 'green';
 				document.getElementById('err_mssg').innerHTML = '';
-				document.getElementById('submit_reg').disabled = "False";
+				document.getElementById('submit_reg').disabled = false;
 			}
 			else {
 				document.getElementById('err_mssg').style.color = 'red';
@@ -68,11 +73,39 @@
 				document.getElementById('psswrd').style.border = '2px solid red';
 				document.getElementById('psswrd_confirm').style.border = '2px solid red';
 				document.getElementById('err_mssg').innerHTML = 'Οι κωδικοί πρέπει να είναι οι ίδιοι';
-				document.getElementById('submit_reg').disabled = "True";
+				document.getElementById('submit_reg').disabled = true;
 			}
 		}
 
+		function log_in_display(){
+			document.getElementById('log_in').style.display = 'none';
+			document.getElementById('log_out').style.display = 'block';
+		}
+
+		function log_out_display(){
+			document.getElementById('log_out').style.display = 'none';
+			document.getElementById('log_in').style.display = 'flex';
+			reset_attempt();
+		}
+
+		function invalid_attempt(){
+			document.getElementById('userfield').style.border = '2px solid red';
+			document.getElementById('userfield').style.backgroundColor = 'pink';
+			document.getElementById('passfield').style.border = '2px solid red';
+			document.getElementById('passfield').style.backgroundColor = 'pink';
+			// alert("Λάθος Όνομα Χρήστη η Κωδικός !!");
+		}
+
+		function reset_attempt(){
+			document.getElementById('userfield').style.border = 'none';
+			document.getElementById('userfield').style.backgroundColor = 'none';
+			document.getElementById('passfield').style.border = 'none';
+			document.getElementById('passfield').style.backgroundColor = 'none';
+
+		}
+
 	</script>
+
 
     <title>Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων</title>
 
@@ -80,42 +113,57 @@
     <!-- <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=<?php echo time(); ?>"/> -->
     <head>
 		<div class="sticky">
-	        <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
-	        <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
-			<link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
-			<link rel="stylesheet" type="text/css" href="../css/navigationbar.css?v=1.1">
+        <link rel="stylesheet" type="text/css" href="../css/header_style.css?v=1.1">
+        <link rel="stylesheet" type="text/css" href="../css/login_style.css?v=1.1">
+        <link rel="stylesheet" type="text/css" href="../css/register_style.css?v=1.1">
 
+    	<!-- <body id="body_1"> -->
+        <div class="myheader">
+			<div class="logoimgtxtcontainer">
+                <div class="myhLogo">
+                    <a href= "../php/homepage.php">
+                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
+						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
+                    </a>
+                </div>
+                <p class="logotxt"><a href="homepage.php">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</a></p>
+            </div>
 
-	    	<!-- <body id="body_1"> -->
-	        <div class="myheader">
-				<div class="logoimgtxtcontainer">
-	                <div class="myhLogo">
-	                    <a href= "../php/hello.php">
-	                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
-							<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
-	                    </a>
-	                </div>
-	                <p class="logotxt">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</p>
-	            </div>
-
-				<div class="login-container">
-					<div class="language-container">
-						<p style="word-spacing:10%;">
-							<a href="#">ΕΛ</a>
-							<p> || </p>
-							<a href="#">ENG</a>
-						</p>
+			<div class="login-container">
+				<div class="language-container">
+					<p style="word-spacing:10%;">
+						<a href="#">ΕΛ</a>
+						<p> || </p>
+						<a href="#">ENG</a>
+					</p>
+				</div>
+				<div class="log_in" >
+					<div class="login_form_container" id="log_in">
+						<form action="" method="post" autocomplete="on">
+							<input type="text" id="userfield" name="name" placeholder="Όνομα Χρήστη" required>
+							<input type="password" id="passfield" name="pswrd" placeholder="Κώδικός" required>
+							<div class="login_submit_container">
+								<input type="submit" name="log_button" style="" value="Είσοδος">
+							</div>
+						</form>
+						<div role="button"  class="register_button" onclick="openForm()">Εγγραφή</div>
+						</div>
 					</div>
-					<div class="log_in" >
-						<div class="login_form_container" >
-							<form action="../php/login.php" method="post" autocomplete="on">
-								<input type="text" name="name" placeholder="Όνομα Χρήστη" required>
-								<input type="password" name="pswrd" placeholder="Κώδικός" required>
-								<div class="login_submit_container">
-									<input type="submit" style="" value="Είσοδος">
+					<div class="logged_in" id="log_out">
+						Συνδεδεμένος Χρήστης: <?php echo($_SESSION['name']); ?><br>
+						<div class="profile_actions">
+							<select  name="prof_actions" id="" onchange="location = this.value">
+								<option value="" hidden style="display:none">Ενέργειες Προφίλ</option>
+								<option value="myprofile.php">Το Προφίλ μου</option>
+								<option value="myprofile.php?prof_actions=0">Τα Στοιχεία μου</option>
+								<?php if($_SESSION['user_type'] == 1){echo"<option value='myprofile.php?prof_actions=1'>Η Επιχείρηση μου</option>";}
+										else if($_SESSION['user_type'] == 2){echo"<option value='myprofile.php?prof_actions=2'>Η Εργασία μου</option>";}
+										// else if($_SESSION['user_type'] == 2){echo"<option value='1'>Η Εργασία μου</option>";}
+								?>
+							</select>
+							<form action="" style="margin:0;padding:0;height:100%;" method="post">
+								<input type="submit" style="height:100%;width=100%;background-color:transparent;border:none;border-left:2px solid grey;margin-left:2%;" id="out" name="logout_button" onclick="" value="Έξοδος">
 
-								<div role="button" class="register_button" onclick="openForm()">Εγγραφή</div>
-								</div>
 							</form>
 						</div>
 					</div>
@@ -206,13 +254,13 @@
 		</div>
 		<div class="register_container">
 			<!-- GEIA -->
-			<form action="./homepage.php" method="post" id="register_form" >
+			<form action="" method="post" id="register_form" >
 				<input type="text" placeholder="Επώνυμο" name="l_name" required style="width:44%;">
-
 				<input type="text" placeholder="Όνομα" name="f_name" required style="width:44%;">
 				<input type="text" placeholder="E-mail" name="email" required><br>
+				<input type="text" placeholder="Α.Μ.Κ.Α." name="amka" required><br>
 				<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Αριθμός Κινητού"required><br>
-				<input type="password" id="psswrd" placeholder="Κωδικός" name="psswrd" onChange='confirm_pass();' required style="width:44%;">
+				<input type="password" id="psswrd" placeholder="Κωδικός" name="psswrd" onchange='confirm_pass();' required style="width:44%;">
 				<input type="password" id="psswrd_confirm" placeholder="Επιβεβαίωση Κωδικού" name="psswrd_confirm" required onChange='confirm_pass();' style="width:44%;"><br>
 				<span id="err_mssg"></span>
 				<select id="user_type" name="user_type" style="width:44%;color:gray" onChange="changeSelect();check_UserType();">
@@ -223,7 +271,6 @@
 				</select>
 
 					<input type="text" placeholder="Δήλωση Επιχείρησης" id="add_b" name="add_b" style="width:44%;display:none">
-					<input type="submit" id="submit_reg" value="Εγγραφή">
 					<select id="select_b" name="select_b" style="width:44%;display:none;" onChange="changeSelect();">
 						<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
 						<?php
@@ -231,7 +278,27 @@
 							$mpla = get_business();
 						?>
 					</select>
+					<input type="submit" name="reg_button" id="submit_reg"  value="Εγγραφή">
 				</form>
 		</div>
 	</div>
+
+	<?php
+		if(isset( $_SESSION['secret'] )){
+			if($_SESSION['secret'] == 1){
+				echo"<script>log_in_display();</script>";
+				include("main_functs.php");
+				getUserType();
+			}
+			else if($_SESSION['secret']==0){
+				echo"<script>invalid_attempt();</script>";
+			}
+			else{
+				echo"<script>log_out_display();</script>";
+			}
+		}else{
+			echo"<script>log_out_display();</script>";
+		}
+	?>
+
 </html>

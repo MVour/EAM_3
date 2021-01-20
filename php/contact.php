@@ -1,9 +1,10 @@
+
 <contact>
 <!DOCTYPE html>
 <html lang="el" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<link rel= "stylesheet" href="../css/homepage_style.css?v=1.1">
+		<!-- <link rel= "stylesheet" href="../css/homepage_style.css?v=1.1"> -->
 		<link rel= "stylesheet" href="../css/contact.css?v=1.1">
 
 		<script
@@ -19,6 +20,10 @@
 		</script>
 
 		<title>Επικοινωνία</title>
+<?php
+	include("../php/main_functs.php");
+	checkall();
+?>
 		<div id="header"></div>
 	</head>
 
@@ -139,6 +144,9 @@
 		</div>
 
 </body>
+
+
+<div id="footer"></div>
 </html>
 
 </contact>

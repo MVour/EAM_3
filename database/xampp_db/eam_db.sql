@@ -23,9 +23,10 @@ DROP TABLE IF EXISTS `Business`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Business` (
-  `Business_id` int NOT NULL,
+  `Business_id` int NOT NULL AUTO_INCREMENT,
+  `Business_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`Business_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,11 +48,12 @@ DROP TABLE IF EXISTS `Employees`;
 CREATE TABLE `Employees` (
   `User_id` int NOT NULL,
   `Business_Business_id` int NOT NULL,
-  PRIMARY KEY (`Business_Business_id`),
+  PRIMARY KEY (`User_id`),
   KEY `fk_Employees_Users1_idx` (`User_id`),
+  KEY `fk_Employees_Business1` (`Business_Business_id`),
   CONSTRAINT `fk_Employees_Business1` FOREIGN KEY (`Business_Business_id`) REFERENCES `Business` (`Business_id`),
   CONSTRAINT `fk_Employees_Users1` FOREIGN KEY (`User_id`) REFERENCES `Users` (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,7 +77,7 @@ CREATE TABLE `Employers` (
   PRIMARY KEY (`User_id`),
   KEY `fk_Employers_Users1_idx` (`User_id`),
   CONSTRAINT `fk_Employers_Users1` FOREIGN KEY (`User_id`) REFERENCES `Users` (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,14 +97,14 @@ DROP TABLE IF EXISTS `Employers_has_Business`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Employers_has_Business` (
-  `Employers_User_id` int NOT NULL,
-  `Business_Business_id` int NOT NULL,
-  PRIMARY KEY (`Employers_User_id`,`Business_Business_id`),
-  KEY `fk_Employers_has_Business_Business1_idx` (`Business_Business_id`),
-  KEY `fk_Employers_has_Business_Employers1_idx` (`Employers_User_id`),
-  CONSTRAINT `fk_Employers_has_Business_Business1` FOREIGN KEY (`Business_Business_id`) REFERENCES `Business` (`Business_id`),
-  CONSTRAINT `fk_Employers_has_Business_Employers1` FOREIGN KEY (`Employers_User_id`) REFERENCES `Employers` (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `User_id` int NOT NULL,
+  `Business_id` int NOT NULL,
+  PRIMARY KEY (`User_id`,`Business_id`),
+  KEY `fk_Employers_has_Business_Business1_idx` (`Business_id`),
+  KEY `fk_Employers_has_Business_Employers1_idx` (`User_id`),
+  CONSTRAINT `fk_Employers_has_Business_Business1` FOREIGN KEY (`Business_id`) REFERENCES `Business` (`Business_id`),
+  CONSTRAINT `fk_Employers_has_Business_Employers1` FOREIGN KEY (`User_id`) REFERENCES `Employers` (`User_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,14 +124,14 @@ DROP TABLE IF EXISTS `Employers_has_Employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Employers_has_Employees` (
-  `Employers_User_id` int NOT NULL,
-  `Employees_Business_Business_id` int NOT NULL,
-  PRIMARY KEY (`Employers_User_id`,`Employees_Business_Business_id`),
-  KEY `fk_Employers_has_Employees_Employees1_idx` (`Employees_Business_Business_id`),
-  KEY `fk_Employers_has_Employees_Employers1_idx` (`Employers_User_id`),
-  CONSTRAINT `fk_Employers_has_Employees_Employees1` FOREIGN KEY (`Employees_Business_Business_id`) REFERENCES `Employees` (`Business_Business_id`),
-  CONSTRAINT `fk_Employers_has_Employees_Employers1` FOREIGN KEY (`Employers_User_id`) REFERENCES `Employers` (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Employer_User_id` int NOT NULL,
+  `Employee_User_id` int NOT NULL,
+  PRIMARY KEY (`Employer_User_id`),
+  KEY `fk_Employers_has_Employees_Employees1_idx` (`Employee_User_id`),
+  KEY `fk_Employers_has_Employees_Employers1_idx` (`Employer_User_id`),
+  CONSTRAINT `fk_Employers_has_Employees_Employees1` FOREIGN KEY (`Employee_User_id`) REFERENCES `Employees` (`User_id`),
+  CONSTRAINT `fk_Employers_has_Employees_Employers1` FOREIGN KEY (`Employer_User_id`) REFERENCES `Employers` (`User_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -142,26 +144,27 @@ LOCK TABLES `Employers_has_Employees` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `Unempolyed`
+-- Table structure for table `Unemployed`
 --
 
-DROP TABLE IF EXISTS `Unempolyed`;
+DROP TABLE IF EXISTS `Unemployed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Unempolyed` (
+CREATE TABLE `Unemployed` (
   `User_id` int NOT NULL,
+  PRIMARY KEY (`User_id`),
   KEY `fk_Unempolyed_Users1_idx` (`User_id`),
   CONSTRAINT `fk_Unempolyed_Users1` FOREIGN KEY (`User_id`) REFERENCES `Users` (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Unempolyed`
+-- Dumping data for table `Unemployed`
 --
 
-LOCK TABLES `Unempolyed` WRITE;
-/*!40000 ALTER TABLE `Unempolyed` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Unempolyed` ENABLE KEYS */;
+LOCK TABLES `Unemployed` WRITE;
+/*!40000 ALTER TABLE `Unemployed` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Unemployed` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -172,12 +175,15 @@ DROP TABLE IF EXISTS `Users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Users` (
-  `User_id` int NOT NULL,
-  `User_nm` varchar(45) DEFAULT NULL,
-  `User_psswrd_MD5` varchar(45) DEFAULT NULL,
-  `User_email` varchar(45) DEFAULT NULL,
+  `User_id` int NOT NULL AUTO_INCREMENT,
+  `User_nm` varchar(45) NOT NULL,
+  `User_lname` varchar(45) NOT NULL,
+  `User_psswrd_MD5` varchar(45) NOT NULL,
+  `User_email` varchar(45) NOT NULL,
+  `User_phone` varchar(45) NOT NULL,
+  `User_amka` varchar(45) NOT NULL,
   PRIMARY KEY (`User_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +192,6 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (1,'mike','12patates','mple'),(2,'rania','mango','kokkino'),(3,'krikor','pop','roz');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,4 +208,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-12 18:54:50
+-- Dump completed on 2021-01-19 15:18:08
