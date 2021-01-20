@@ -87,3 +87,29 @@ html, body{
     margin-right: auto;
     /* padding: 2%; */
 }
+
+.inner_con{
+    width:100%;
+    height: 100%;
+    border: 2px solid green;
+    display: block;
+}
+
+
+.news_article form{
+    font-size: 130%;
+
+}
+
+
+.news_article form label{
+    /* background-color: pink; */
+    text-decoration: underline;
+    margin: 2%;
+}
+
+
+.news_article form input{
+    width: 10%;
+    margin: 2%;
+}

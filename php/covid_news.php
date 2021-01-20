@@ -1,3 +1,4 @@
+
 <!DOCTYPE>
 <homepage>
 <html>
@@ -55,7 +56,10 @@
             }
 
         </script>
-
+<?php
+	include("../php/main_functs.php");
+	checkall();
+?>
     </head>	
     <div id="header"></div>
     
@@ -110,8 +114,7 @@
 
     <?php
         if(isset($_GET['article'])){
-            include("../php/main_functs.php");
-            $id = prep_input(intval($_GET['article']));
+            $id = intval($_GET['article']);
             // echo $id;
             echo "<script>showArticle(", $id,");</script>";
         }

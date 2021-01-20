@@ -1,7 +1,5 @@
-
 <?php if(!session_id()) session_start(); ?>
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 	<meta charset="UTF-8">
@@ -147,16 +145,19 @@
 					<div class="logged_in" id="log_out">
 						Συνδεδεμένος Χρήστης: <?php echo($_SESSION['name']); ?><br>
 						<div class="profile_actions">
-							<select name="prof_actions" id="" style="background-color:transparent;border:none;font-size:100%;">
-								<option value="" hidden style="display:none">Προφίλ</option>
-								<option value="0">Το Προφίλ μου</option>
-								<?php if($_SESSION['user_type'] == 1){echo"<option value='1'>Η Επιχείρηση μου</option>";}
-										else if($_SESSION['user_type'] == 2){echo"<option value='2'>Η Εργασία μου</option>";}
+							<select  name="prof_actions" id="" onchange="location = this.value">
+								<option value="" hidden style="display:none">Ενέργειες Προφίλ</option>
+								<option value="myprofile.php">Το Προφίλ μου</option>
+								<option value="myprofile.php?prof_actions=0">Τα Στοιχεία μου</option>
+								<?php if($_SESSION['user_type'] == 1){echo"<option value='myprofile.php?prof_actions=1'>Η Επιχείρηση μου</option>";}
+										else if($_SESSION['user_type'] == 2){echo"<option value='myprofile.php?prof_actions=2'>Η Εργασία μου</option>";}
 										// else if($_SESSION['user_type'] == 2){echo"<option value='1'>Η Εργασία μου</option>";}
 								?>
 							</select>
-
-							<role="button" onclick="log_out_display();"> Έξοδος
+							<form action="" style="margin:0;padding:0;height:100%;" method="post">
+								<input type="submit" style="height:100%;width=100%;background-color:transparent;border:none;border-left:2px solid grey;margin-left:2%;" id="out" name="logout_button" onclick="" value="Έξοδος">							
+							
+							</form>
 						</div>
 					</div>
 				</div>
@@ -209,10 +210,17 @@
 		if(isset( $_SESSION['secret'] )){
 			if($_SESSION['secret'] == 1){
 				echo"<script>log_in_display();</script>";
+				include("main_functs.php");
+				getUserType();
 			}
-			else{
+			else if($_SESSION['secret']==0){
 				echo"<script>invalid_attempt();</script>";
 			}
+			else{
+				echo"<script>log_out_display();</script>";
+			}
+		}else{
+			echo"<script>log_out_display();</script>";
 		}
 	?>
 

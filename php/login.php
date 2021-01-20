@@ -1,8 +1,6 @@
 <!DOCTYPE>
-
-<?php if(!session_id()) session_start(); ?>
 <?php
-
+// if(!session_id()) session_start();
     function prep_input($data){
         $data = trim($data);
         $data = stripslashes($data);
@@ -11,6 +9,8 @@
     }
 
     function log_in(){
+
+        if(!session_id()) session_start();
         $servername = "127.0.0.1";
         $username = "root";
         $password = "patates";
@@ -32,6 +32,7 @@
         if($result->num_rows != NULL){
             if($row['User_id'] != NULL){
                 $_SESSION['LOGED'] = 1;
+                $_SESSION['secret'] = 1;
                 return $row['User_id'];
             }
             else{

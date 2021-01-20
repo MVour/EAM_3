@@ -1,9 +1,7 @@
+<? if(!session_id()) session_start(); ?>
 <homepage>
 <html>
-
-<?php if(!session_id()) session_start(); ?>
 	<meta charset="UTF-8">
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 		function filterFunction(that, event) {
 		    let container, input, filter, li, input_val;
@@ -103,9 +101,6 @@
 			  $("#footer").load("footer.php");
 			});
 
-
-
-
 				function openNav() {
 					document.getElementById("reg").style.display = "flex";
 					document.getElementById("reg").style.backgroundColor = "lightblue";
@@ -138,47 +133,8 @@
 		</script>
 
 	<?php
-		$_GLOBALS['secret'] = -1;
-		if(isset( $_POST['log_button'] )){
-			include("../php/login.php");
-			include("../php/main_functs.php");
-			$valid = log_in();
-			if($valid != -1){
-				$_SESSION['name'] = $_POST['name'];
-				$_SESSION['user_id'] = $valid;
-				$_SESSION['user_type'] = getUserType();
-				$_SESSION['secret'] = 1;
-			}
-			else{
-				$_SESSION['secret'] = 0;
-				echo"<script>alert('Λάθος Όνομα Χρήστη ή Κωδικός');</script>";
-			}
-		}
-
-		if(isset($_POST['reg_button'])){
-			include("../php/main_functs.php");
-			$_SESSION['f_name'] = $_POST['f_name'];
-			$_SESSION['l_name'] = $_POST['l_name'];
-			$_SESSION['email'] = $_POST['email'];
-			$_SESSION['amka'] = $_POST['amka'];
-			$_SESSION['psswrd'] = $_POST['psswrd'];
-			$_SESSION['phone'] = $_POST['phone'];
-			$_SESSION['user_type'] = $_POST['user_type'];
-			$_SESSION['add_b'] = $_POST['add_b'];
-			$_SESSION['select_b'] = $_POST['select_b'];
-			$suc = newUser();
-			if($suc == 1){
-				include("../php/login.php");
-				$_POST['name'] = $_SESSION['f_name'];
-				$_SESSION['name'] = $_POST['name'];
-				$valid = log_in();
-				if($valid != -1){
-					$_SESSION['user_id'] = $valid;
-					$_SESSION['secret'] = 1;
-				}
-			}
-		}
-
+		include("../php/main_functs.php");
+		checkall();
 	?>
 	</head>
 

@@ -104,11 +104,34 @@
 
   .profile_actions{
     display: flex;
-    height: auto;
+    min-height: 3%;
+    min-width: 7%;
     width: auto;
-    color: rgba(128, 128, 128, 0.89)
+    color: rgba(128, 128, 128, 0.89);
+    margin-top: 2%;
+    /* border: 2px solid red; */
+    padding: 3px;
   }
 
+  
+
+
+  select-selected{
+    background-color: yellow;
+  }
+
+  .profile_actions select{
+    background-color: transparent;
+    border: 2px solid green;
+    border:none;
+    box-shadow: none;
+  }
+
+  .profile_actions select-selected{
+    background-color: none;
+    border:none;
+    box-shadow: none;
+  }
 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {

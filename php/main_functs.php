@@ -1,3 +1,5 @@
+<? if(!session_id()) session_start(); ?>
+
 <!Doctype>
 <?php
     function get_business() {
@@ -56,13 +58,13 @@
 
         $str_Employers = "Insert into Employers (User_id) Values(?);";
         
-        $str_Employees = "Insert into Empolyees (User_id, Busines_Business_id) Values(?, ?);";
+        $str_Employees = "Insert into Employees (User_id, Busines_Business_id) Values(?, ?);";
         
         $str_Bus = "Insert into Business (Business_name) Values(?)";
 
         $str_EB = "Insert into Employers_has_Business (User_id, Business_id) Values(?, ?)";
 
-        $str_EE = "Insert into Employers_has_Employees (Empolyer_User_id, Employee_User_id) Values(?, ?)";
+        $str_EE = "Insert into Employers_has_Employees (Employer_User_id, Employee_User_id) Values(?, ?)";
     
         $str_find = "Select User_id from Employers_has_Business WHERE Business_id = ?";
 
@@ -145,10 +147,10 @@
         if(!$conn){
             die("Connection failed: " . mysqli_connect_error());
         }
-        
-        $str1 = "Select count(*) from Employees where User_id = ?";
-        $str2 = "Select count(*) from Employers where User_id = ?";
 
+        $str1 = "Select count(*) from Employers where User_id = ?";
+        $str2 = "Select count(*) from Employees where User_id = ?";
+        
         $query = $conn->prepare($str1);
         $query->bind_param("s", $_SESSION['user_id']);
         $query->execute();
@@ -179,6 +181,174 @@
         
     }
 
+    function check_login(){
+        if(isset( $_POST['log_button'] )){
+			include("../php/login.php");
+			$valid = log_in();
+			if($valid != -1){
+				// if(!session_id()) session_start();
+				$_SESSION['name'] = $_POST['name'];
+				$_SESSION['user_id'] = $valid;
+				$_SESSION['user_type'] = getUserType();
+				$_SESSION['secret'] = 1;
+				echo"<script>log_in_display();</script>";
+			
+			}
+			else{
+				$_SESSION['secret'] = 0;
+				echo"<script>alert('Λάθος Όνομα Χρήστη ή Κωδικός');</script>";
+			}
+		}
+    }
+
+
+    function check_logout(){
+        if(isset($_POST['logout_button'])){
+            $_SESSION['secret'] = -1;
+            $_SESSION['LOGED'] = 0;
+            session_destroy();
+		}
+    }
+
+
+    function check_reg(){
+        if(isset($_POST['reg_button'])){
+			include("../php/main_functs.php");
+			$_SESSION['f_name'] = $_POST['f_name'];
+			$_SESSION['l_name'] = $_POST['l_name'];
+			$_SESSION['email'] = $_POST['email'];
+			$_SESSION['amka'] = $_POST['amka'];
+			$_SESSION['psswrd'] = $_POST['psswrd'];
+			$_SESSION['phone'] = $_POST['phone'];
+			$_SESSION['user_type'] = $_POST['user_type'];
+			$_SESSION['add_b'] = $_POST['add_b'];
+			$_SESSION['select_b'] = $_POST['select_b'];
+			$suc = newUser();
+			if($suc == 1){
+				include("../php/login.php");
+				$_POST['name'] = $_SESSION['f_name'];
+				$_SESSION['name'] = $_POST['name'];
+				$valid = log_in();
+				if($valid != -1){
+					$_SESSION['user_id'] = $valid;
+					$_SESSION['secret'] = 1;
+				}
+			}
+			unset($_POST['reg_button']);
+		}
+    }
+
+    function checkall(){
+		check_login();
+		check_logout();
+		check_reg();
+    }
+
+
+    function getUser_info(){
+        $servername = "127.0.0.1";
+        $username = "root";
+        $password = "patates";
+        $db_name = "eam_db";
+        $port = "3307";
+
+        $conn =  new mysqli($servername, $username, $password, $db_name, $port);
+        if(!$conn){
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $str1 = "Select * from Users where User_id = ?";
+        
+        $query = $conn->prepare($str1);
+        $query->bind_param("s", $_SESSION['user_id']);
+        $query->execute();
+        $result = $query->get_result();
+        
+        $row = $result->fetch_assoc();
+        
+        return $row;
+    }
+
+
+    function getUser_business(){
+        $servername = "127.0.0.1";
+        $username = "root";
+        $password = "patates";
+        $db_name = "eam_db";
+        $port = "3307";
+
+        $conn =  new mysqli($servername, $username, $password, $db_name, $port);
+        if(!$conn){
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $str1 = "Select Business_name from Business
+                    where Business_id in ( SELECT Business_id from Employers_has_Business where User_id = ? )";
+        
+        $query = $conn->prepare($str1);
+        $query->bind_param("s", $_SESSION['user_id']);
+        $query->execute();
+        $result = $query->get_result();
+        
+        $b_names = array();
+        while($cur_r = $result->fetch_assoc()){
+            array_push($b_names, $cur_r['Business_name']);
+        }
+        
+        return $b_names;
+    }
+
+    function getUser_Work(){
+        $servername = "127.0.0.1";
+        $username = "root";
+        $password = "patates";
+        $db_name = "eam_db";
+        $port = "3307";
+
+        $conn =  new mysqli($servername, $username, $password, $db_name, $port);
+        if(!$conn){
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $str1 = "Select * from Users where User_id = ?";
+        
+        $query = $conn->prepare($str1);
+        $query->bind_param("s", $_SESSION['user_id']);
+        $query->execute();
+        $result = $query->get_result();
+        
+        $row = $result->fetch_assoc();
+        
+        return $row;
+    }
+
+    function getEmployees($business){
+        $servername = "127.0.0.1";
+        $username = "root";
+        $password = "patates";
+        $db_name = "eam_db";
+        $port = "3307";
+
+        $conn =  new mysqli($servername, $username, $password, $db_name, $port);
+        if(!$conn){
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $str1 = "Select User_nm from Users
+            where User_id in( Select User_id from Employees
+                where Business_id in (Select Business_id from Business where Business_name = ?)
+            )";
+        $query = $conn->prepare($str1);
+        $query->bind_param("s", $business);
+        $query->execute();
+        $result = $query->get_result();
+        
+        $data = array();
+        while($cur_r = $result->fetch_assoc()){
+            array_push($data, $cur_r['']);
+        }
+        return $data;
+    }
 
     // newUser();
 ?>

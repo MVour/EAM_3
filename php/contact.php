@@ -1,3 +1,4 @@
+
 <contact>
 <!DOCTYPE html>
 <html lang="gr" dir="ltr">
@@ -19,6 +20,10 @@
 		</script>
 
 		<title>Επικοινωνία</title>
+<?php
+	include("../php/main_functs.php");
+	checkall();
+?>
 		<div id="header"></div>
 	</head>
 
