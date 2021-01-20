@@ -86,11 +86,11 @@
                 <div role="button" class="news_container" id="4" onclick="showArticle('4')">
                     <p role="button" >Εργοδότης ~ Οργανωτικά Μέτρα</p>
                 </div>
+                <div class="news_container" id="6" name="6" role="button" onclick="showArticle('6')">
+                    <p>Ατομική Υγιεινή</p>
+                </div>
                 <div class="news_container" id="5" name="5" role="button" onclick="showArticle('5')">
                     <p>Εργοδότης ~ Περιβαντολλογικά Μέτρα</p>
-                </div>
-                <div class="news_container" id="6" name="6" role="button" onclick="showArticle('6')">
-                    <p>Εργαζόμενος ~ Ατομική Υγιεινή</p>
                 </div>
                 <div class="news_container" id="7" name="7" role="button" onclick="showArticle('7')">
                     <p>Εργαζόμενος ~ Ενέργεις σε Περίπτωση Κρούσματος</p>
