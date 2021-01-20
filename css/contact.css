@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	max-height: 100%;
+	max-height: auto;
 	width: 100;
 	padding: 8%;
 	/* margin: auto; */
@@ -266,4 +266,24 @@ body {
 	display: flex;
 	align-self: center;
 	align-items: center;
+}
+
+.radiocontainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lbutt a {
+	color: black;
+}
+.lbutt a:hover {
+	color: powderblue;
 }

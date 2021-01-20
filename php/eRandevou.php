@@ -16,14 +16,14 @@ echo "Success";
 		<link rel="stylesheet" href="/css/contact.css">
 
 		<script
-		src="https://code.jquery.com/jquery-3.3.1.js"
-		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-		crossorigin="anonymous">
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
 		</script>
 		<script>
 		$(function(){
 			$("#header").load("header.php");
-			// $("#footer").load("footer.php");
+			$("#footer").load("footer.php");
 		});
 		</script>
 
@@ -114,7 +114,11 @@ echo "Success";
 			});
 		</script>
 
-		</header> -->
+		</header>
+		<?php
+			include("../php/main_functs.php");
+			checkall();
+		?>
 		<div id="header"></div>
 	</head>
 
@@ -260,5 +264,6 @@ echo "Success";
 		<!-- time picker -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 	</body>
+	<div id="footer"></div>
 </html>
 </yphresies>

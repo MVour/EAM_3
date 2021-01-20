@@ -128,9 +128,10 @@ form fieldset .FisrtsContainer {
 	justify-content: center;
 }
 
-.submitRow input[type=submit] {
+.submitRow input[type=submit], input[type=button] {
   background-color: whitesmoke;
   height: 100%;
+  padding: 1%;
   width: 20%;
   align-self: center;
   border: none;
@@ -138,7 +139,7 @@ form fieldset .FisrtsContainer {
   font-size: 20px;
 }
 
-.submitRow input[type=submit]:hover {
+.submitRow input[type=submit]:hover, input[type=button]:hover {
   background-color: #45a049;
 }
 

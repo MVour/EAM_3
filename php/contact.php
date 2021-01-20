@@ -15,7 +15,7 @@
 		<script>
 		$(function(){
 			$("#header").load("header.php");
-			// $("#footer").load("footer.php");
+			$("#footer").load("footer.php");
 		});
 		</script>
 
@@ -91,8 +91,8 @@
 					<div class="lbutt lightbutt">
 						<p>Nέα Ωράρια λόγω COVID-19</p>
 					</div>
-					<div class="lbutt bluebutt">
-						<p>Online Ραντεβού</p>
+					<div class="lbutt bluebutt" style="padding:2%;">
+						<a href="eRandevou.php">Online Ραντεβού</a>
 					</div>
 				</div>
 
@@ -138,14 +138,9 @@
 
 			</div>
 
-
-
-
 		</div>
 
 </body>
-
-
 <div id="footer"></div>
 </html>
 
