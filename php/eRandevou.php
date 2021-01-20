@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="/css/contact.css">
 
 		<script
-		src="https://code.jquery.com/jquery-3.3.1.js"
-		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-		crossorigin="anonymous">
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
 		</script>
 		<script>
 		$(function(){
@@ -106,6 +106,8 @@
 			$('input.timepicker').timepicker({});
 			});
 		</script>
+
+		</header>
 		<?php
 			include("../php/main_functs.php");
 			checkall();

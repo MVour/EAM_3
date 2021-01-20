@@ -133,7 +133,7 @@
 		</script>
 
 	<?php
-		include("../php/main_functs.php");
+		include_once"../php/main_functs.php";
 		checkall();
 	?>
 	</head>

@@ -117,7 +117,7 @@
 			<div class="logoimgtxtcontainer">
                 <div class="myhLogo">
                     <a href= "../php/homepage.php">
-                        <img src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
+                        <img alt="logo" src = "../include/images/logo.jpg" max-height="80%" maxwidth="80%;">
 						<!-- <img src = "../include/images/logo.jpg"  style="float:right;width:120px;height:120px;"> -->
                     </a>
                 </div>
@@ -130,7 +130,7 @@
 						<a href="#">ΕΛ</a>
 						<p> || </p>
 						<a href="#">ENG</a>
-					</p>
+					</p><br>
 				</div>
 				<div class="log_in" >
 					<div class="login_form_container" id="log_in">
@@ -141,7 +141,11 @@
 								<input type="submit" name="log_button" style="" value="Είσοδος">
 							</div>
 						</form>
-						<div role="button"  class="register_button" onclick="openForm()">Εγγραφή</div>
+						<div>
+							<div role="button"  class="register_button" onclick="openForm()">Εγγραφή</div>
+							</div><br>
+							<div class="" style="display:block;color:white;font-size:60%;margin:2%;margin-right:4%;">'Η Είσοδος μέσω TAXIS'
+							</div>
 						</div>
 					</div>
 					<div class="logged_in" id="log_out">
@@ -164,7 +168,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="topnav">
+			<div class="topnav" style="margin-bottom:1%;">
 			  <a class="active" href="../php/homepage.php">Home</a>
 			  <div class="dropdown">
 			    <button class="dropbtn">Εργαζόμενος
@@ -178,7 +182,7 @@
 						<a href="#">Νέα και Ενημερώσεις</a>
 						<a href="#">Νομικά</a>
 						<a href="#">Στατιστικά</a>
-						<a href="">e-Υπηρεσίες</a>
+						<a href="e-services.php">e-Υπηρεσίες</a>
 						<a href="#">Συχνές Ερωτήσεις</a>
 					</div>
 				<!-- </div> -->
@@ -195,7 +199,7 @@
 					  <a href="#">Νέα και Ενημερώσεις</a>
 					  <a href="#">Νομικά</a>
 					  <a href="#">Στατιστικά</a>
-					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="e-services.php">e-Υπηρεσίες</a>
 					  <a href="#">Συχνές Ερωτήσεις</a>
 				  </div>
 			  <!-- </div> -->
@@ -212,7 +216,7 @@
 					  <a href="#">Νέα και Ενημερώσεις</a>
 					  <a href="#">Νομικά</a>
 					  <a href="#">Στατιστικά</a>
-					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="e-services.php">e-Υπηρεσίες</a>
 					  <a href="#">Συχνές Ερωτήσεις</a>
 				  </div>
 			  </div>
@@ -229,7 +233,7 @@
 					  <a href="#">Νέα και Ενημερώσεις</a>
 					  <a href="#">Νομικά</a>
 					  <a href="#">Στατιστικά</a>
-					  <a href="#">e-Υπηρεσίες</a>
+					  <a href="e-services.php">e-Υπηρεσίες</a>
 					  <a href="#">Συχνές Ερωτήσεις</a>
 				  </div>
 			  </div>
@@ -269,7 +273,7 @@
 					<select id="select_b" name="select_b" style="width:44%;display:none;" onChange="changeSelect();">
 						<option value="" hidden style="display:none;">Επιλογή Επιχείρησης</option>
 						<?php
-							include("../php/main_functs.php");
+							include_once"../php/main_functs.php";
 							$mpla = get_business();
 						?>
 					</select>
@@ -282,7 +286,7 @@
 		if(isset( $_SESSION['secret'] )){
 			if($_SESSION['secret'] == 1){
 				echo"<script>log_in_display();</script>";
-				include("main_functs.php");
+				include_once"../php/main_functs.php";
 				getUserType();
 			}
 			else if($_SESSION['secret']==0){

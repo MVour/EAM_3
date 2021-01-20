@@ -58,7 +58,7 @@
 
         $str_Employers = "Insert into Employers (User_id) Values(?);";
         
-        $str_Employees = "Insert into Employees (User_id, Busines_Business_id) Values(?, ?);";
+        $str_Employees = "Insert into Employees (User_id, Business_Business_id) Values(?, ?);";
         
         $str_Bus = "Insert into Business (Business_name) Values(?)";
 
@@ -67,6 +67,8 @@
         $str_EE = "Insert into Employers_has_Employees (Employer_User_id, Employee_User_id) Values(?, ?)";
     
         $str_find = "Select User_id from Employers_has_Business WHERE Business_id = ?";
+
+        $str_finB = "Select Business_id from Business where Business_name = ?";
 
         $last_User_id = -1;
         $last_Business_id = -1;
@@ -104,7 +106,7 @@
             $query->execute();
 
                 // find employer
-            $query = $conn->prepare($str_fine);
+            $query = $conn->prepare($str_find);
             $query->bind_param("i", intval($_SESSION['select_b']));
             $query->execute();
             $result = $query->get_result();
@@ -213,7 +215,6 @@
 
     function check_reg(){
         if(isset($_POST['reg_button'])){
-			include("../php/main_functs.php");
 			$_SESSION['f_name'] = $_POST['f_name'];
 			$_SESSION['l_name'] = $_POST['l_name'];
 			$_SESSION['email'] = $_POST['email'];

@@ -362,9 +362,10 @@ div.searchable {
 .SampleRow {
 	width: 100%;
 	/* height: 300px; */
-	height: 20%;
+	height: auto;
 	display: flex;
 	background-color: white;
+	/* z-index: -1; */
 }
 
 .SimpleContainer {
@@ -525,29 +526,20 @@ div.searchable {
   .sidenav a {font-size: 18px;}
 }
 
-
-/* dropdown covid categories */
-
 .sidenav .Cdropdown {
 	height: auto;
 	width: 100%;
 	float: left;
 	display: block;
 	margin-top: auto;
-	/* position: relative; */
 }
 
 .Cdropdown-content {
 	display: none;
-	/* columns: 1; */
 	position: absolute;
-	/* position: relative; */
 	background-color: CadetBlue;
 	width: 100%;
-	/* height: auto; */
 	left: 0;
-	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-	/* z-index: 2; */
 	background-color:pink;
 }
 
